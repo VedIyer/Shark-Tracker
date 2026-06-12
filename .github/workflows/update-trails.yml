@@ -26,6 +26,11 @@ jobs:
       - name: Install Playwright's Chromium browser
         run: npx playwright install --with-deps chromium
 
+      - name: Find Asia/Pacific-region animals and add them
+        run: node find-pacific.js
+        env:
+          CI: 'true'
+
       - name: Scrape trails and bake into index.html
         run: npm run scrape
         env:
@@ -35,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html trails.json
+          git add index.html trails.json scrape.js pacific-animals.json 2>/dev/null || git add index.html trails.json
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
