@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦈 Shark Tracker</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#0f172a}
+header{background:#0f172a;color:white;padding:11px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;border-bottom:1px solid #1e293b}
+header h1{font-size:15px;font-weight:600;letter-spacing:.3px}
+header p{font-size:11px;color:#475569;margin-top:1px}
+.live{background:#0ea5e9;color:white;font-size:9px;padding:2px 6px;border-radius:99px;margin-left:6px;letter-spacing:.5px;text-transform:uppercase}
+#layout{display:flex;flex:1;overflow:hidden}
+#sidebar{width:260px;min-width:260px;background:#0f172a;border-right:1px solid #1e293b;display:flex;flex-direction:column;overflow:hidden}
+#search-wrap{padding:10px 12px;border-bottom:1px solid #1e293b}
+#search-wrap input{width:100%;padding:7px 10px;border:1px solid #1e293b;border-radius:7px;font-size:13px;outline:none;background:#1e293b;color:white}
+#search-wrap input::placeholder{color:#475569}
+#search-wrap input:focus{border-color:#0ea5e9}
+#filters{padding:8px 12px;border-bottom:1px solid #1e293b;display:flex;gap:5px;flex-wrap:wrap}
+.pill{font-size:11px;padding:3px 9px;border-radius:99px;border:1px solid #1e293b;background:transparent;color:#64748b;cursor:pointer}
+.pill.on{background:#0ea5e9;color:white;border-color:#0ea5e9}
+#count{padding:5px 14px;font-size:11px;color:#334155;border-bottom:1px solid #1e293b}
+#list{flex:1;overflow-y:auto}
+#list::-webkit-scrollbar{width:4px}
+#list::-webkit-scrollbar-track{background:#0f172a}
+#list::-webkit-scrollbar-thumb{background:#1e293b;border-radius:2px}
+.row{padding:10px 14px;border-bottom:1px solid #1e293b;cursor:pointer;display:flex;align-items:center;gap:10px}
+.row:hover{background:#1e293b}
+.row.sel{background:#0c1a2e;border-left:3px solid #0ea5e9}
+.av{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:#1e293b}
+.ri{flex:1;min-width:0}
+.rn{font-size:13px;font-weight:600;color:#e2e8f0}
+.rs{font-size:11px;color:#475569;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+#map{flex:1}
+.leaflet-container{background:#a8c8e8}
+.leaflet-control-zoom a{background:#1e293b!important;color:#94a3b8!important;border-color:#334155!important}
+.leaflet-control-zoom a:hover{background:#334155!important;color:white!important}
+.leaflet-control-layers{background:#1e293b!important;color:#e2e8f0!important;border:1px solid #334155!important;border-radius:8px!important}
+.leaflet-control-layers label{color:#cbd5e1!important}
+.leaflet-control-attribution{background:rgba(15,23,42,.7)!important;color:#334155!important;font-size:9px!important}
+.leaflet-control-attribution a{color:#475569!important}
+
+/* Detail panel */
+#detail{position:fixed;top:58px;right:14px;width:230px;background:#0f172a;border-radius:12px;border:1px solid #1e293b;padding:14px;box-shadow:0 8px 32px rgba(0,0,0,.5);display:none;max-height:calc(100vh - 72px);overflow-y:auto;z-index:1000}
+#detail h3{font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:10px;line-height:1.3;padding-right:20px}
+.dr{display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px;gap:8px}
+.dl{color:#475569;flex-shrink:0}.dv{color:#cbd5e1;font-weight:500;text-align:right}
+#trail-status{margin-top:8px;font-size:11px;color:#475569;padding:6px 8px;background:#1e293b;border-radius:6px;line-height:1.5}
+#detail img{width:100%;border-radius:6px;margin-top:10px;display:none;opacity:.9}
+#close-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:14px;cursor:pointer;color:#475569;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:4px}
+#close-btn:hover{background:#1e293b;color:#e2e8f0}
+
+/* Playback controls */
+#playback{margin-top:10px;border-top:1px solid #1e293b;padding-top:10px;display:none}
+#playback-btns{display:flex;gap:6px;margin-bottom:8px}
+#play-btn{flex:1;padding:6px;background:#0ea5e9;color:white;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+#play-btn:hover{background:#0284c7}
+#play-btn:disabled{background:#1e293b;color:#475569;cursor:default}
+#reset-btn{padding:6px 10px;background:#1e293b;color:#94a3b8;border:none;border-radius:6px;cursor:pointer;font-size:12px}
+#reset-btn:hover{background:#334155;color:white}
+#speed-wrap{display:flex;align-items:center;gap:6px;margin-bottom:8px}
+#speed-wrap label{font-size:10px;color:#475569;flex-shrink:0}
+#speed{flex:1;accent-color:#0ea5e9}
+#progress-wrap{display:flex;align-items:center;gap:6px}
+#progress-wrap label{font-size:10px;color:#475569;flex-shrink:0}
+#progress{flex:1;accent-color:#0ea5e9;cursor:pointer}
+#ping-info{margin-top:6px;font-size:10px;color:#64748b;text-align:center;min-height:14px;font-family:monospace}
+
+
+/* Shark of the Day */
+#sotd{margin:10px 12px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;border:1px solid #1e293b;background:linear-gradient(135deg,#0c4a6e,#075985);position:relative;transition:transform .15s}
+#sotd:hover{transform:translateY(-1px);border-color:#0ea5e9}
+#sotd-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7dd3fc;padding:8px 12px 0}
+#sotd-body{display:flex;align-items:center;gap:10px;padding:6px 12px 10px}
+#sotd-emoji{font-size:28px;flex-shrink:0}
+#sotd-info{flex:1;min-width:0}
+#sotd-name{font-size:15px;font-weight:700;color:white}
+#sotd-meta{font-size:10px;color:#bae6fd;margin-top:1px}
+#sotd-ping{font-size:9px;color:#7dd3fc;margin-top:3px}
+#sotd-img{width:100%;height:70px;object-fit:cover;display:block;opacity:.85}
+
+
+/* View toggle */
+#view-toggle{background:#1e293b;color:#cbd5e1;border:1px solid #334155;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;flex-shrink:0}
+#view-toggle:hover{background:#334155;color:white;border-color:#0ea5e9}
+/* Globe */
+#globe{flex:1;display:none;position:relative;background:#000}
+#globe canvas{display:block}
+#globe-hint{position:fixed;bottom:20px;left:calc(50% + 130px);transform:translateX(-50%);background:rgba(15,23,42,.8);color:#94a3b8;font-size:11px;padding:6px 12px;border-radius:99px;pointer-events:none;z-index:1100;display:none}
+#globe-legend{position:fixed;bottom:20px;right:20px;background:rgba(15,23,42,.9);border:1px solid #334155;border-radius:8px;padding:8px 10px;font-size:10px;color:#cbd5e1;max-width:130px;z-index:1100;display:none}
+
+body.is-3d #globe-hint, body.is-3d #globe-legend{display:block}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(14,165,233,.7)}70%{box-shadow:0 0 0 12px rgba(14,165,233,0)}}
+@keyframes sharkpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+
+/* ─── Mobile / responsive ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  header { padding: 10px 12px; }
+  header h1 { font-size: 14px; }
+  header p { display: none; }
+  #view-toggle { padding: 6px 10px; font-size: 11px; }
+
+  #layout { flex-direction: column; position: relative; }
+  #map, #globe { width: 100%; height: 100%; }
+
+  /* Sidebar becomes a bottom sheet that slides up */
+  #sidebar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%; min-width: 0;
+    height: 60vh;
+    border-right: none;
+    border-top: 1px solid #1e293b;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.6);
+    transform: translateY(calc(100% - 96px)); /* peek: handle + search visible */
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+    z-index: 1300;
+  }
+  #sidebar.open { transform: translateY(0); }
+
+  /* The whole top strip (handle + search) is the drag/tap target */
+  #sheet-handle {
+    display: block;
+    padding: 10px 0 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+  }
+  #sheet-handle::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 42px; height: 5px;
+    background: #475569;
+    border-radius: 99px;
+  }
+  #sheet-handle::after {
+    content: 'Tap to browse animals';
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: #475569;
+    margin-top: 14px;
+  }
+  #sidebar.open #sheet-handle::after { content: 'Tap to close'; }
+
+  /* When open, search + filters + list show normally */
+  #search-wrap { padding-top: 4px; }
+
+  /* Detail panel as full-width bottom sheet, above the list sheet */
+  #detail {
+    position: fixed;
+    top: auto; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    max-height: 72vh;
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    z-index: 1400;
+  }
+  #detail h3 { font-size: 16px; }
+  .dr { font-size: 13px; }
+
+  #play-btn, #reset-btn { padding: 10px; font-size: 14px; }
+  #progress, #speed { height: 24px; }
+
+  /* Move legends up and shrink so they don't sit under the sheet peek */
+  .species-legend, #globe-legend {
+    font-size: 9px;
+    transform: scale(.8);
+    transform-origin: bottom right;
+    bottom: 104px !important;
+  }
+  .sst-legend { transform: scale(.8); transform-origin: bottom left; bottom: 104px !important; }
+  #globe-legend { bottom: 104px; }
+  #globe-hint { bottom: 104px; }
+
+  #sotd-img { height: 56px; }
+
+  .leaflet-control-zoom a { width: 34px !important; height: 34px !important; line-height: 34px !important; font-size: 18px !important; }
+  /* Keep zoom controls clear of the bottom sheet */
+  .leaflet-bottom { margin-bottom: 96px; }
+}
+
+/* Hide the mobile sheet handle on desktop */
+#sheet-handle { display: none; }
+
+</style>
+</head>
+<body>
+<header>
+  <span style="font-size:20px">🦈</span>
+  <div style="flex:1">
+    <h1>Shark Tracker <span class="live">Live</span></h1>
+    <p>Powered by OCEARCH · click any animal to explore its journey</p>
+  </div>
+  <button id="view-toggle" onclick="toggleView()">🌐 3D Globe</button>
+</header>
+<div id="layout">
+  <div id="sidebar">
+    <div id="sheet-handle" onclick="toggleSheet()"></div>
+    <div id="search-wrap"><input id="srch" placeholder="Search animals…" oninput="render()"></div>
+    <div id="sotd" onclick="openSotd()" style="display:none">
+      <img id="sotd-img" alt="">
+      <div id="sotd-label">⭐ Shark of the Day</div>
+      <div id="sotd-body">
+        <div id="sotd-emoji">🦈</div>
+        <div id="sotd-info">
+          <div id="sotd-name"></div>
+          <div id="sotd-meta"></div>
+          <div id="sotd-ping"></div>
+        </div>
+      </div>
+    </div>
+    <div id="filters">
+      <button class="pill on" onclick="setF('all',this)">All</button>
+      <button class="pill" onclick="setF('Sharks',this)">Sharks</button>
+      <button class="pill" onclick="setF('Turtles',this)">Turtles</button>
+      <button class="pill" onclick="setF('White Shark',this)">White</button>
+      <button class="pill" onclick="setF('Tiger',this)">Tiger</button>
+    </div>
+    <div id="count"></div>
+    <div id="list"></div>
+  </div>
+  <div id="map"></div>
+  <div id="globe"></div>
+  <div id="globe-hint">drag to rotate · scroll to zoom</div>
+  <div id="globe-legend"></div>
+</div>
+
+<div id="detail">
+  <button id="close-btn" onclick="closeDetail()" title="Close">✕</button>
+  <h3 id="d-name"></h3>
+  <div class="dr"><span class="dl">Species</span><span class="dv" id="d-sp"></span></div>
+  <div class="dr"><span class="dl">Sex</span><span class="dv" id="d-sx"></span></div>
+  <div class="dr"><span class="dl">Length</span><span class="dv" id="d-ln"></span></div>
+  <div class="dr"><span class="dl">Weight</span><span class="dv" id="d-wt"></span></div>
+  <div class="dr"><span class="dl">Last ping</span><span class="dv" id="d-lp"></span></div>
+  <div id="trail-status"></div>
+
+  <div id="playback">
+    <div id="playback-btns">
+      <button id="play-btn" onclick="togglePlay()">▶ Play</button>
+      <button id="reset-btn" onclick="resetAnimation()">↺</button>
+    </div>
+    <div id="speed-wrap">
+      <label>Speed</label>
+      <input type="range" id="speed" min="1" max="10" value="5">
+    </div>
+    <div id="progress-wrap">
+      <label>Ping</label>
+      <input type="range" id="progress" min="0" value="0" step="1">
+    </div>
+    <div id="ping-info"></div>
+  </div>
+
+  <img id="d-img" alt="">
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/globe.gl@2.32.0/dist/globe.gl.min.js"></script>
+<script>
+const TRAILS = window._TRAILS || {};
+const ANIMALS = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.40671, 32.81965]}, "properties": {"id": 544541, "name": "Breton", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "13 ft 3 in.", "weight": "1,437 lbs", "stage_of_life": "Adult", "tag_location": "Scatarie Island, Nova Scotia", "last_move_datetime": "2026-05-25T21:01:13Z", "zping_datetime": "2026-06-02T17:42:11+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/544541/slshmw_09122020_ocearch_novascotia_scatarieisland_0749-copy_seTzp18.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.389, 34.54676]}, "properties": {"id": 2344847, "name": "Contender", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "13 ft. 9 in.", "weight": "1653 lbs.", "stage_of_life": "Adult", "tag_location": "Offshore of FL/GA border", "last_move_datetime": "2026-04-24T03:57:20Z", "zping_datetime": "2026-06-04T16:13:57+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2344847/czugok-1-17-2025-ongoing-field-research-whiteshark-contender-color-adjusted.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.00241, 25.33007]}, "properties": {"id": 1561937, "name": "Penny", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "10 ft. 3 in.", "weight": "522 lbs.", "stage_of_life": "Juvenile", "tag_location": "Off Ocracoke, North Carolina", "last_move_datetime": "2026-02-23T15:13:02Z", "zping_datetime": "2026-06-08T18:07:54+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1561937/4qjvoz_image_6487327.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.57856, 36.05004]}, "properties": {"id": 2881663, "name": "Brookes", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "8 ft. 10 in.", "weight": "456 lbs.", "stage_of_life": "Juvenile", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-09T05:15:02Z", "zping_datetime": "2026-06-05T10:54:46+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2881663/azfbsb-brookes-still-tracker.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-72.84419, 37.13584]}, "properties": {"id": 2884021, "name": "Ripple", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "11 ft. 6 in.", "weight": "778 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-09T00:53:45Z", "zping_datetime": "2026-05-22T22:19:43+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2884021/sd0riu-ripple-1.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.58643, 30.47927]}, "properties": {"id": 2885826, "name": "Goodall", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "13 ft. 1 in.", "weight": "1,393 lbs.", "stage_of_life": "Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-09T08:49:49Z", "zping_datetime": "2026-06-08T13:24:34+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2885826/qvgjcw-goodall-2-cropped.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.14088, 37.15412]}, "properties": {"id": 2344838, "name": "Danny", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "9 ft. 6 in.", "weight": "462 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Offshore of FL/GA border", "last_move_datetime": "2026-04-17T01:09:38Z", "zping_datetime": "2026-06-04T04:07:29+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2344838/phl20z-1-17-2025-ongoing-field-research-whiteshark-danny-ultrasound.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.23226, 41.0953]}, "properties": {"id": 2794989, "name": "Quint", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "9 ft. 8 in.", "weight": "587 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-05-21T01:02:11Z", "zping_datetime": "2026-06-07T05:09:19+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2794989/eysubx-quint-pic-cropped-and-brightened.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-69.89171, 41.83258]}, "properties": {"id": 2790721, "name": "Bella", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "10 ft. 2 in.", "weight": "729 lbs.", "stage_of_life": "Juvenile", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-07T03:28:49Z", "zping_datetime": "2026-05-28T22:26:03+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2790721/1wvxgh-bella-2.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.52428, 32.5292]}, "properties": {"id": 2789925, "name": "Jason", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "9 ft. 4 in.", "weight": "510 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-05-04T16:00:56Z", "zping_datetime": "2026-05-16T23:49:00+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2789925/czwolt-jason-white-shark-v2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.03937, 32.35145]}, "properties": {"id": 2790722, "name": "Baker", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "12 ft. 10 in.", "weight": "1,429 lbs", "stage_of_life": "Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2025-12-11T17:23:25Z", "zping_datetime": "2026-05-07T00:54:28+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2790722/kfteip-baker-pic-cropped-v2.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.75873, 27.72317]}, "properties": {"id": 2548468, "name": "Mira", "species": "Dusky Shark (Carcharhinus obscurus)", "gender": "Female", "length": "9 ft. 8 in.", "weight": "327 lbs.", "stage_of_life": "Adult", "tag_location": "Jacksonville, FL", "last_move_datetime": "2026-03-11T00:40:27Z", "zping_datetime": "2026-06-04T11:05:05+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2548468/l3djjz-mira-pic-version-2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.20578, 29.58298]}, "properties": {"id": 2893202, "name": "Serena", "species": "Tiger Shark (Galeocerdo cuvier)", "gender": "Female", "length": "11 ft. 2 in.", "weight": "708 lbs.", "stage_of_life": "Adult", "tag_location": "Jacksonville, FL", "last_move_datetime": "2025-11-09T21:29:49Z", "zping_datetime": "2026-01-08T05:25:42+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2893202/jxs0d6-serena-1.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.61242, 21.11235]}, "properties": {"id": 3470603, "name": "To\u00f1o", "species": "Tiger Shark (Galeocerdo cuvier)", "gender": "Male", "length": "9 ft. 4 in.", "weight": "265 lbs.", "stage_of_life": "Adult", "tag_location": "East of Isla Mujeres", "last_move_datetime": "2026-06-09T22:03:25Z", "zping_datetime": "2026-06-07T23:49:15+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3470603/2ojbyj-tt4-pics-slightly-edited.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-85.80932, 27.21717]}, "properties": {"id": 1167289, "name": "Crystal", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "10 ft.", "weight": "460 lbs.", "stage_of_life": "Juvenile", "tag_location": "Lookout Shoals, North Carolina", "last_move_datetime": "2025-01-04T00:35:49Z", "zping_datetime": "2026-06-03T16:56:13+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1167289/q8bz1z_ocearch_exp_carolinas_crystal_03142022_2048x1365.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-40.05211, 29.22372]}, "properties": {"id": 551127, "name": "Nukumi", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "17 ft 2 in.", "weight": "3,541 lbs", "stage_of_life": "Adult", "tag_location": "Lunenburg, Nova Scotia", "last_move_datetime": "2021-04-11T13:03:07Z", "zping_datetime": "2021-10-11T02:47:09+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/551127/h2kcv5_10012020_ocearch_novascotia2020_chrisross_nukumi_a7a6043b_K0M7e6e.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.92322, 39.52354]}, "properties": {"id": 288428, "name": "Mary Lee", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "16 ft", "weight": "2,639 lbs", "stage_of_life": "Adult", "tag_location": "Cape Cod, MA", "last_move_datetime": "2017-06-17T19:54:32Z", "zping_datetime": "2017-06-15T20:39:08+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288428/zzqgcv_w3fsiw_ocearch_cc_marylee_fin_202untd.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.6193, 21.588789]}, "properties": {"id": 2832241, "name": "Niabi", "species": "Whale Shark (Rhincodon typus)", "gender": "Male", "length": "26 ft.", "weight": null, "stage_of_life": "Adult", "tag_location": "Northeast Isla Mujeres, Mexico", "last_move_datetime": "2025-08-19T09:10:49Z", "zping_datetime": "2025-12-24T17:34:43+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2832241/2w5zfy-whale-shark-niabi-pic1.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.26753, 27.86735]}, "properties": {"id": 2883372, "name": "Webster", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "12 ft. 2 in.", "weight": "1008 lbs", "stage_of_life": "Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-04-12T15:15:16Z", "zping_datetime": "2026-05-26T16:26:19+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2883372/dvlu8q-white-shark-webster-still.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.33276, 33.95992]}, "properties": {"id": 2886160, "name": "Brass Bed", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "9 ft. 2 in.", "weight": "433 lbs.", "stage_of_life": "Juvenile", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-05-18T11:20:18Z", "zping_datetime": "2026-06-08T16:26:37+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2886160/apjoea-brass-bed-cropped.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.52954, 33.94866]}, "properties": {"id": 2886164, "name": "Ernst", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "12 ft.", "weight": "1,009 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-08T13:53:57Z", "zping_datetime": "2026-06-05T17:05:51+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2886164/2zguzj-ernst-image-cropped.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.45574, 38.83948]}, "properties": {"id": 2886165, "name": "Cross", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "9 ft. 1 in.", "weight": "377 lbs.", "stage_of_life": "Juvenile", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-05-30T04:34:46Z", "zping_datetime": "2026-06-05T16:35:48+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2886165/ib7utn-cross-image-cropped-jpg.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-64.71998, 43.68751]}, "properties": {"id": 2885995, "name": "Nori", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "8 ft. 10 in.", "weight": "423 lbs.", "stage_of_life": "Juvenile", "tag_location": "Mahone Bay, Nova Scotia", "last_move_datetime": "2026-06-05T23:01:11Z", "zping_datetime": "2026-06-05T23:00:07+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2885995/fgbbyy-nori-shark-15-cropped.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.37349, 24.5453]}, "properties": {"id": 1480814, "name": "Jekyll", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "8 ft. 8 in.", "weight": "395 lbs.", "stage_of_life": "Juvenile", "tag_location": "Jekyll Island, GA", "last_move_datetime": "2024-02-16T04:20:35Z", "zping_datetime": "2024-07-26T00:46:57+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1480814/lvjeze_jekyll_2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.236, 34.2366]}, "properties": {"id": 1483470, "name": "Frosty", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "9 ft. 2 in.", "weight": "393 lbs.", "stage_of_life": "Juvenile", "tag_location": "St. Simon's Island, GA", "last_move_datetime": "2024-01-07T02:45:35Z", "zping_datetime": "2024-02-25T01:33:06+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1483470/scdwej_frosty-2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-55.65901, 50.846]}, "properties": {"id": 2361676, "name": "Dold", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "11 ft. 2 in.", "weight": "761 lbs.", "stage_of_life": "Sub-Adult", "tag_location": "Offshore of FL/GA border", "last_move_datetime": "2025-09-15T03:58:38Z", "zping_datetime": "2026-05-28T13:52:35+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2361676/hkbhbm-2-28-2025-ongoing-field-research-whiteshark-dold-3.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.04481, 28.75759]}, "properties": {"id": 3467308, "name": "LYS", "species": "Great Hammerhead (Sphyrna mokarran)", "gender": "Female", "length": "11 ft. 7 in.", "weight": "364 lbs.", "stage_of_life": "Adult", "tag_location": "East of Isla Mujeres", "last_move_datetime": "2026-05-28T11:46:42Z", "zping_datetime": "2026-05-22T07:16:56+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3467308/t5njyn-lys-under-boat-edited-and-cropped.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.71571, 21.17569]}, "properties": {"id": 2141156, "name": "F\u00e9lix", "species": "Great Hammerhead (Sphyrna mokarran)", "gender": "Male", "length": "8 ft. 10 in.", "weight": "257 lbs.", "stage_of_life": "Adult", "tag_location": "East of Isla Mujeres", "last_move_datetime": "2024-11-03T02:12:07Z", "zping_datetime": "2026-02-01T12:33:33+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2141156/y91aiu-cropped-pic-of-felix2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.72239, 27.75808]}, "properties": {"id": 2431784, "name": "Hanna", "species": "Tiger Shark (Galeocerdo cuvier)", "gender": "Female", "length": "11 ft. 11 in.", "weight": "722 lbs.", "stage_of_life": "Adult", "tag_location": "30 nm off Jacksonville, Florida", "last_move_datetime": "2025-11-16T04:34:05Z", "zping_datetime": "2025-11-14T12:24:02+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2431784/nsp2ex-4-13-2025-tiger-shark-hanna-1.png"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.84066, 24.73094]}, "properties": {"id": 290985, "name": "Unama'ki", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "15 ft 5 in.", "weight": "2,195 lbs", "stage_of_life": "Adult", "tag_location": "Scatarie Island, Nova Scotia", "last_move_datetime": "2020-11-11T02:06:17Z", "zping_datetime": "2021-03-12T01:27:06+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/290985/s2izy8_unamaki-tracker-image_HpcjtM3.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.48831, 36.24427]}, "properties": {"id": 858430, "name": "Scot", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "12.30 ft.", "weight": "1,644 lbs.", "stage_of_life": "Adult", "tag_location": "Ironbound Island, Nova Scotia", "last_move_datetime": "2025-11-14T10:47:52Z", "zping_datetime": "2026-03-03T17:45:11+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/858430/pylvft_photo1_2048x1366.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.5897, 28.67234]}, "properties": {"id": 867210, "name": "Bob", "species": "White Shark (Carcharodon carcharias)", "gender": "Male", "length": "13 ft. 4 in.", "weight": "1,308 lbs.", "stage_of_life": "Adult", "tag_location": "Ironbound Island, Nova Scotia", "last_move_datetime": "2025-01-05T02:11:42Z", "zping_datetime": "2026-05-26T01:04:16+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/867210/mghlh8_photo-1_2048x1365.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.42169, 24.30108]}, "properties": {"id": 865246, "name": "Sarah", "species": "White Shark (Carcharodon carcharias)", "gender": "Female", "length": "10 ft. 4 in.", "weight": "632 lbs.", "stage_of_life": "Juvenile", "tag_location": "Ironbound Island, Nova Scotia", "last_move_datetime": "2023-12-18T02:32:20Z", "zping_datetime": "2026-04-12T00:40:19+00:00", "category_name": {"en": "Sharks"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/865246/uae9z8_09142021_ocearch_expeditionnovascotia21_sarah_chrisross__wm1jpg_2048x1365.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.89779, 36.15553]}, "properties": {"id": 3551617, "name": "Tupelo", "species": "Leatherback Sea Turtle (Dermochelys coriacea)", "gender": "Female", "length": "4 ft. 11 in.", "weight": "630 lbs.", "stage_of_life": "Adult", "tag_location": "Jupiter Beach, Florida", "last_move_datetime": "2026-06-09T10:53:22Z", "zping_datetime": null, "category_name": {"en": "Turtles"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3551617/yrofva-tupelo.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.57484, 32.87852]}, "properties": {"id": 3552504, "name": "Tallulah", "species": "Leatherback Sea Turtle (Dermochelys coriacea)", "gender": "Female", "length": "5 ft. 3 in.", "weight": "990 lbs.", "stage_of_life": "Adult", "tag_location": "Juno Beach, Florida", "last_move_datetime": "2026-06-09T05:10:17Z", "zping_datetime": null, "category_name": {"en": "Turtles"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552504/lh2khp-tallulah.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.24074, 27.94204]}, "properties": {"id": 3552505, "name": "Priscilla", "species": "Leatherback Sea Turtle (Dermochelys coriacea)", "gender": "Female", "length": "5 ft. 7 in.", "weight": "840 lbs.", "stage_of_life": "Adult", "tag_location": "Juno Beach, Florida", "last_move_datetime": "2026-06-09T14:44:35Z", "zping_datetime": "2026-06-06T10:16:14+00:00", "category_name": {"en": "Turtles"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552505/6od6lv-priscilla-cropped.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.29469, 39.10634]}, "properties": {"id": 2812557, "name": "Wassaw Will", "species": "Loggerhead Sea Turtle (Caretta caretta)", "gender": "Female", "length": "3 ft. 3 in.", "weight": null, "stage_of_life": "Adult", "tag_location": "Wassaw National Wildlife Refuge", "last_move_datetime": "2026-06-10T00:52:43Z", "zping_datetime": "2026-05-22T04:11:33+00:00", "category_name": {"en": "Turtles"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2812557/ece5ja-wassaw-will-v2.jpg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-64.82951, 41.20416]}, "properties": {"id": 2108458, "name": "Bootes", "species": "Leatherback Sea Turtle (Dermochelys coriacea)", "gender": "Female", "length": "5 ft. 4 in.", "weight": "987 lbs.", "stage_of_life": "Adult", "tag_location": "Juno Beach, Florida", "last_move_datetime": "2025-11-28T03:40:23Z", "zping_datetime": "2025-11-22T20:46:22+00:00", "category_name": {"en": "Turtles"}, "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2108458/j2q3fw-bootes-withjt-enhancements.jpg"}}]};
+
+// ── Map ────────────────────────────────────────────────────────────────────
+const map = L.map('map', { center: [30, -55], zoom: 3 });
+
+const ocean = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; GEBCO, NOAA',
+  maxZoom: 13,
+}).addTo(map);
+
+const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri', maxZoom: 19,
+});
+
+const street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap', maxZoom: 19,
+});
+
+// NASA GIBS Sea Surface Temperature overlay (free, no key)
+// Uses yesterday's date since today's data may not be processed yet
+function gibsDate() {
+  const d = new Date();
+  d.setDate(d.getDate() - 2); // 2 days back for guaranteed availability
+  return d.toISOString().slice(0, 10);
+}
+
+const sstLayer = L.tileLayer(
+  'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/GHRSST_L4_MUR_Sea_Surface_Temperature/default/{time}/GoogleMapsCompatible_Level7/{z}/{y}/{x}.png',
+  {
+    attribution: 'SST &copy; NASA GIBS / GHRSST',
+    maxNativeZoom: 7,
+    maxZoom: 13,
+    opacity: 0.65,
+    tileSize: 256,
+    time: gibsDate(),
+    errorTileUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==',
+  }
+);
+
+L.control.layers(
+  { '🌊 Ocean': ocean, '🛰 Satellite': satellite, '🗺 Street': street },
+  { '🌡 Sea Temp': sstLayer },
+  { position: 'topright', collapsed: false }
+).addTo(map);
+
+// Temperature legend (shown when SST layer is on)
+const sstLegend = L.control({ position: 'bottomleft' });
+sstLegend.onAdd = function() {
+  const div = L.DomUtil.create('div', 'sst-legend');
+  div.innerHTML = `
+    <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:8px 10px;font-size:10px;color:#cbd5e1">
+      <div style="font-weight:600;margin-bottom:5px">🌡 Sea Surface Temp</div>
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="width:90px;height:10px;background:linear-gradient(to right,#3b0080,#0044ff,#00d4ff,#00ff88,#ffe000,#ff8800,#ff0000,#8b0000);border-radius:2px"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:2px;color:#64748b">
+        <span>-2°C</span><span>15°C</span><span>32°C</span>
+      </div>
+    </div>`;
+  return div;
+};
+
+// Show/hide legend with the layer
+map.on('overlayadd', e => { if(e.name.includes('Sea Temp')) sstLegend.addTo(map); });
+map.on('overlayremove', e => { if(e.name.includes('Sea Temp')) sstLegend.remove(); });
+map.on('click', () => closeDetail());
+
+// Marker cluster group — merges nearby pins into numbered circles
+const clusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 45,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  iconCreateFunction: function(cluster) {
+    const count = cluster.getChildCount();
+    const size = count < 10 ? 34 : count < 50 ? 42 : 50;
+    return L.divIcon({
+      html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #0ea5e9, #0369a1);border:2px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,.5)">' + count + '</div>',
+      className: '',
+      iconSize: [size, size],
+    });
+  }
+});
+map.addLayer(clusterGroup);
+
+// Species color legend (bottom-right)
+const speciesLegend = L.control({ position: 'bottomright' });
+speciesLegend.onAdd = function() {
+  const div = L.DomUtil.create('div', 'species-legend');
+  const items = [
+    ['White Shark', '#3b82f6'], ['Tiger', '#f59e0b'], ['Hammerhead', '#ec4899'],
+    ['Mako', '#a855f7'], ['Bull', '#ef4444'], ['Whale Shark', '#14b8a6'],
+    ['Blue Shark', '#06b6d4'], ['Turtle', '#84cc16'],
+  ];
+  div.innerHTML = '<div style="background:rgba(15,23,42,.85);border:1px solid #334155;border-radius:8px;padding:8px 10px;font-size:10px;color:#cbd5e1;max-width:130px">' +
+    '<div style="font-weight:600;margin-bottom:5px">Species</div>' +
+    items.map(([n,c]) => '<div style="display:flex;align-items:center;gap:5px;margin-bottom:2px"><span style="width:9px;height:9px;border-radius:50%;background:' + c + ';display:inline-block;flex-shrink:0"></span>' + n + '</div>').join('') +
+    '</div>';
+  return div;
+};
+speciesLegend.addTo(map);
+
+// ── State ──────────────────────────────────────────────────────────────────
+let sel = null, filt = 'all';
+let markers = {};
+let trailLayers = [];
+
+// Animation state
+let animPings = [];       // full ping list [{lat,lon,dt}]
+let animProgressInit = 0; // (animProgress declared below)
+let animTimer = null;     // setInterval handle
+let animPlaying = false;
+let animSharkMarker = null;
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+const pingAge = d => { if(!d) return 'old'; const h=(Date.now()-new Date(d))/36e5; return h<24?'recent':h<168?'week':'old'; };
+const dotColor = a => ({recent:'#10b981',week:'#f59e0b',old:'#64748b'}[a]);
+
+// Species → distinctive color
+const speciesColor = sp => {
+  sp = (sp || '').toLowerCase();
+  if(sp.includes('white')) return '#3b82f6';        // blue
+  if(sp.includes('tiger')) return '#f59e0b';         // amber
+  if(sp.includes('hammerhead')||sp.includes('sphyrna')) return '#ec4899'; // pink
+  if(sp.includes('mako')) return '#a855f7';          // purple
+  if(sp.includes('bull')) return '#ef4444';          // red
+  if(sp.includes('dusky')) return '#f97316';         // orange
+  if(sp.includes('blue shark')||sp.includes('prionace')) return '#06b6d4'; // cyan
+  if(sp.includes('blacktip')) return '#64748b';      // slate
+  if(sp.includes('whale shark')||sp.includes('rhincodon')) return '#14b8a6'; // teal
+  if(sp.includes('turtle')||sp.includes('caretta')||sp.includes('leather')||sp.includes('ridley')||sp.includes('chelonia')) return '#84cc16'; // lime
+  if(sp.includes('dolphin')) return '#8b5cf6';       // violet
+  if(sp.includes('seal')) return '#a3a3a3';          // gray
+  if(sp.includes('sword')) return '#0ea5e9';         // sky
+  return '#94a3b8';
+};
+// Ring color shows ping freshness
+const ageRing = a => ({recent:'#10b981',week:'#f59e0b',old:'rgba(255,255,255,.3)'}[a]);
+const emo = sp => { sp=(sp||'').toLowerCase(); if(sp.includes('turtle')||sp.includes('caretta')||sp.includes('leather')||sp.includes('ridley')) return '🐢'; if(sp.includes('whale shark')||sp.includes('rhincodon')) return '🐋'; return '🦈'; };
+const fmtDate = s => { const d=new Date(s); return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); };
+
+function visible() {
+  const q = document.getElementById('srch').value.toLowerCase();
+  return ANIMALS.features.filter(f => {
+    const cat = f.properties.category_name?.en || '';
+    const sp = f.properties.species || '';
+    const nm = (f.properties.name || '').toLowerCase();
+    if(filt==='Sharks' && cat!=='Sharks') return false;
+    if(filt==='Turtles' && cat!=='Turtles') return false;
+    if(filt!=='all' && filt!=='Sharks' && filt!=='Turtles' && !sp.includes(filt)) return false;
+    if(q && !nm.includes(q) && !sp.toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+function setF(f, btn) {
+  filt = f;
+  document.querySelectorAll('.pill').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  render();
+}
+
+// ── Clear everything ────────────────────────────────────────────────────────
+function clearTrail() {
+  stopAnimation();
+  trailLayers.forEach(l => { try { map.removeLayer(l); } catch(e){} });
+  trailLayers = [];
+  if(animSharkMarker) { try { map.removeLayer(animSharkMarker); } catch(e){} animSharkMarker = null; }
+  animPings = [];
+  animProgress = 0;
+  // Clear globe rings if present
+  if(globe) { try { globe.ringsData([]); } catch(e){} }
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────
+function render() {
+  const vis = visible();
+  document.getElementById('count').textContent = vis.length + ' of ' + ANIMALS.features.length + ' animals';
+
+  document.getElementById('list').innerHTML = vis.map(f => {
+    const p = f.properties;
+    const age = pingAge(p.zping_datetime || p.last_move_datetime);
+    const isSel = sel && sel.properties.id === p.id;
+    return '<div class="row' + (isSel?' sel':'') + '" onclick="selectAnimal(' + p.id + ')">' +
+      '<div class="av" style="background:' + speciesColor(p.species) + '33">' + emo(p.species) + '</div>' +
+      '<div class="ri"><div class="rn">' + p.name + '</div><div class="rs">' + (p.species||'Unknown') + '</div></div>' +
+      '<div class="dot" style="background:' + dotColor(age) + '" title="ping age"></div></div>';
+  }).join('');
+
+  // Clear existing markers from the cluster group
+  clusterGroup.clearLayers();
+  markers = {};
+
+  vis.forEach(f => {
+    const p = f.properties;
+    const [lon, lat] = f.geometry.coordinates;
+    const age = pingAge(p.zping_datetime || p.last_move_datetime);
+    const spCol = speciesColor(p.species);
+    const ring = ageRing(age);
+    const isSel = sel && sel.properties.id === p.id;
+    const size = isSel ? 38 : 28;
+
+    // Species color fill + ping-age colored ring
+    const icon = L.divIcon({
+      className: '',
+      html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:' + spCol +
+            ';border:' + (isSel ? '3px solid #fff' : '3px solid ' + ring) +
+            ';display:flex;align-items:center;justify-content:center;font-size:' + (isSel?18:13) +
+            'px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45)' +
+            (isSel ? ';outline:3px solid #0ea5e9;outline-offset:1px' : '') + '">' + emo(p.species) + '</div>',
+      iconSize: [size, size],
+      iconAnchor: [size/2, size/2],
+    });
+
+    const marker = L.marker([lat, lon], { icon, zIndexOffset: isSel?1000:0 })
+      .on('click', e => { L.DomEvent.stopPropagation(e); selectAnimal(p.id); });
+
+    markers[p.id] = marker;
+    clusterGroup.addLayer(marker);
+  });
+
+  if(is3D && globe) updateGlobeData();
+}
+
+// ── Select animal ──────────────────────────────────────────────────────────
+function selectAnimal(id) {
+  sel = ANIMALS.features.find(f => f.properties.id === id) || null;
+  if(!sel) return;
+  // On mobile, collapse the bottom sheet so the map is visible
+  if (window.innerWidth <= 720) document.getElementById('sidebar').classList.remove('open');
+  const p = sel.properties;
+
+  document.getElementById('d-name').textContent = p.name;
+  document.getElementById('d-sp').textContent = p.species || '—';
+  document.getElementById('d-sx').textContent = p.gender || '—';
+  document.getElementById('d-ln').textContent = p.length || '—';
+  document.getElementById('d-wt').textContent = p.weight || '—';
+  const lp = p.zping_datetime || p.last_move_datetime;
+  document.getElementById('d-lp').textContent = lp ? fmtDate(lp) : '—';
+  const img = document.getElementById('d-img');
+  if(p.image){img.src=p.image;img.style.display='block';}else{img.style.display='none';}
+  document.getElementById('detail').style.display = 'block';
+
+  clearTrail();
+
+  const t = TRAILS[id];
+  if(t && t.motion && t.motion.length > 0) {
+    // Parse pings
+    animPings = t.motion.map(m => ({
+      lat: m.point.coordinates[1],
+      lon: m.point.coordinates[0],
+      dt: m.dt_move,
+    }));
+    const km = t.log && t.log.total ? ' · ' + Math.round(t.log.total/1000).toLocaleString() + ' km' : '';
+    document.getElementById('trail-status').textContent = '✅ ' + animPings.length + ' pings' + km;
+
+    // Set up playback UI
+    const prog = document.getElementById('progress');
+    prog.max = animPings.length - 1;
+    prog.value = animPings.length - 1;
+    prog.oninput = () => { stopAnimation(); seekTo(parseInt(prog.value)); };
+    document.getElementById('playback').style.display = 'block';
+    document.getElementById('play-btn').disabled = false;
+
+    // Draw full static trail first
+    drawFullTrail();
+
+    // Fit map
+    const bounds = L.latLngBounds(animPings.map(p => [p.lat, p.lon]));
+    map.fitBounds(bounds.pad(0.15));
+  } else {
+    document.getElementById('trail-status').textContent = 'No trail — run npm run scrape to fetch it.';
+    document.getElementById('playback').style.display = 'none';
+    const [lon, lat] = sel.geometry.coordinates;
+    if(!is3D) map.panTo([lat, lon], { animate: true });
+  }
+
+  render();
+
+  // Globe sync
+  if(is3D && globe) {
+    updateGlobeData();
+    const [lon, lat] = sel.geometry.coordinates;
+    globe.pointOfView({ lat, lng: lon, altitude: 1.5 }, 1000);
+  }
+}
+
+function closeDetail() {
+  sel = null;
+  clearTrail();
+  document.getElementById('detail').style.display = 'none';
+  document.getElementById('playback').style.display = 'none';
+  render();
+  if(is3D && globe) updateGlobeData();
+}
+
+// ── Draw full static trail ──────────────────────────────────────────────────
+function drawFullTrail() {
+  // Remove old trail layers (but not the shark marker)
+  trailLayers.forEach(l => { try { map.removeLayer(l); } catch(e){} });
+  trailLayers = [];
+  if(animSharkMarker) { try { map.removeLayer(animSharkMarker); } catch(e){} animSharkMarker = null; }
+
+  if(!animPings.length) return;
+  const col = dotColor(pingAge(sel.properties.zping_datetime || sel.properties.last_move_datetime));
+  const n = animPings.length;
+
+  // Fading trail segments
+  for(let i = 1; i < n; i++) {
+    const opacity = 0.1 + 0.85 * (i / n);
+    const seg = L.polyline(
+      [[animPings[i-1].lat, animPings[i-1].lon], [animPings[i].lat, animPings[i].lon]],
+      { color: col, weight: 2.5, opacity }
+    ).addTo(map);
+    trailLayers.push(seg);
+  }
+
+  // Start dot (first ping) — green circle with "Start" label
+  const startDot = L.circleMarker([animPings[0].lat, animPings[0].lon], {
+    radius: 6, color: 'white', weight: 2, fillColor: '#22c55e', fillOpacity: 1,
+  }).addTo(map).bindTooltip('Start · ' + fmtDate(animPings[0].dt), { permanent: false, direction: 'top' });
+  trailLayers.push(startDot);
+
+  // Intermediate ping dots
+  for(let i = 1; i < n - 1; i++) {
+    const dot = L.circleMarker([animPings[i].lat, animPings[i].lon], {
+      radius: 2.5, color: col, fillColor: col, fillOpacity: 0.4, weight: 0
+    }).addTo(map).bindTooltip(fmtDate(animPings[i].dt), { direction: 'top' });
+    trailLayers.push(dot);
+  }
+
+  // Current position — pulsing
+  const last = animPings[n - 1];
+  const pulseIcon = L.divIcon({
+    className: '',
+    html: '<div style="width:16px;height:16px;border-radius:50%;background:' + col + ';border:2.5px solid white;animation:pulse 1.5s infinite"></div>',
+    iconSize: [16, 16], iconAnchor: [8, 8],
+  });
+  const pulseDot = L.marker([last.lat, last.lon], { icon: pulseIcon, zIndexOffset: 2000 })
+    .addTo(map).bindTooltip('Now · ' + fmtDate(last.dt), { direction: 'top' });
+  trailLayers.push(pulseDot);
+
+  updatePingInfo(n - 1);
+}
+
+// ── Animation ──────────────────────────────────────────────────────────────
+// Smooth animation using requestAnimationFrame + interpolation
+let animProgress = 0;      // continuous 0..(N-1), fractional between pings
+let animRAF = null;        // requestAnimationFrame handle
+let animLastTs = 0;
+
+function togglePlay() {
+  if(animPlaying) { stopAnimation(); }
+  else { startAnimation(); }
+}
+
+function startAnimation() {
+  if(!animPings.length) return;
+  // If at end, restart
+  if(animProgress >= animPings.length - 1) { animProgress = 0; }
+  animPlaying = true;
+  document.getElementById('play-btn').textContent = '⏸ Pause';
+  animLastTs = performance.now();
+  animRAF = requestAnimationFrame(animStep);
+}
+
+function animStep(ts) {
+  if(!animPlaying) return;
+  const dt = (ts - animLastTs) / 1000; // seconds since last frame
+  animLastTs = ts;
+
+  // Speed slider 1..10 → pings per second 0.7 .. 12
+  const speed = parseInt(document.getElementById('speed').value);
+  const pingsPerSec = 0.5 + speed * 1.2;
+
+  animProgress += dt * pingsPerSec;
+
+  if(animProgress >= animPings.length - 1) {
+    animProgress = animPings.length - 1;
+    drawSmoothFrame(animProgress);
+    stopAnimation();
+    document.getElementById('play-btn').textContent = '▶ Replay';
+    return;
+  }
+
+  document.getElementById('progress').value = Math.round(animProgress);
+  drawSmoothFrame(animProgress);
+  animRAF = requestAnimationFrame(animStep);
+}
+
+function stopAnimation() {
+  if(animRAF) { cancelAnimationFrame(animRAF); animRAF = null; }
+  animPlaying = false;
+  document.getElementById('play-btn').textContent = '▶ Play';
+}
+
+function resetAnimation() {
+  stopAnimation();
+  animProgress = 0;
+  document.getElementById('progress').value = 0;
+  document.getElementById('play-btn').textContent = '▶ Play';
+  drawSmoothFrame(0);
+}
+
+function seekTo(frame) {
+  animProgress = frame;
+  drawSmoothFrame(frame);
+}
+
+// Linear interpolate between two [lat,lon]
+function lerpLatLon(a, b, t) {
+  return [a.lat + (b.lat - a.lat) * t, a.lon + (b.lon - a.lon) * t];
+}
+
+let animTrailLine = null; // single growing polyline (more efficient than many segments)
+
+function drawSmoothFrame(prog) {
+  // prog is fractional: integer part = last passed ping, fraction = progress to next
+  const idx = Math.floor(prog);
+  const frac = prog - idx;
+
+  // Clear dynamic layers
+  trailLayers.forEach(l => { try { map.removeLayer(l); } catch(e){} });
+  trailLayers = [];
+  if(animSharkMarker) { try { map.removeLayer(animSharkMarker); } catch(e){} animSharkMarker = null; }
+
+  if(!animPings.length) return;
+  const col = dotColor(pingAge(sel.properties.zping_datetime || sel.properties.last_move_datetime));
+
+  // Build the path coordinates up to current interpolated position
+  const pathCoords = [];
+  for(let i = 0; i <= idx; i++) pathCoords.push([animPings[i].lat, animPings[i].lon]);
+
+  // Current interpolated position
+  let curPos;
+  if(idx < animPings.length - 1 && frac > 0) {
+    curPos = lerpLatLon(animPings[idx], animPings[idx+1], frac);
+    pathCoords.push(curPos);
+  } else {
+    curPos = [animPings[idx].lat, animPings[idx].lon];
+  }
+
+  // Draw the trail as a single smooth polyline
+  if(pathCoords.length > 1) {
+    const line = L.polyline(pathCoords, { color: col, weight: 3, opacity: 0.85, lineJoin: 'round', lineCap: 'round' }).addTo(map);
+    trailLayers.push(line);
+  }
+
+  // Start marker (green)
+  const startDot = L.circleMarker([animPings[0].lat, animPings[0].lon], {
+    radius: 6, color: 'white', weight: 2, fillColor: '#22c55e', fillOpacity: 1,
+  }).addTo(map).bindTooltip('Start · ' + fmtDate(animPings[0].dt), { permanent: false });
+  trailLayers.push(startDot);
+
+  // Moving shark marker at interpolated position
+  const sharkIcon = L.divIcon({
+    className: '',
+    html: '<div style="font-size:22px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))">' + emo(sel.properties.species) + '</div>',
+    iconSize: [28, 28], iconAnchor: [14, 14],
+  });
+  animSharkMarker = L.marker(curPos, { icon: sharkIcon, zIndexOffset: 3000 }).addTo(map);
+
+  updatePingInfo(idx);
+
+  // Sync the globe shark position if in 3D
+  if(is3D && globe) updateGlobeAnimPosition(curPos, pathCoords);
+}
+
+function updatePingInfo(frame) {
+  if(!animPings.length) return;
+  const p = animPings[frame];
+  document.getElementById('ping-info').textContent =
+    fmtDate(p.dt) + ' · ping ' + (frame + 1) + '/' + animPings.length;
+}
+
+
+// ── Shark of the Day ───────────────────────────────────────────────────────
+let sotdAnimal = null;
+function pickSharkOfDay() {
+  // Pool: all animals that have trail data (so the feature shows a real journey)
+  const withTrails = ANIMALS.features.filter(f => {
+    const t = TRAILS[f.properties.id];
+    return t && t.motion && t.motion.length > 1;
+  });
+  const pool = withTrails.length > 0 ? withTrails : ANIMALS.features.slice();
+
+  // Sort by id for a stable, consistent ordering (independent of file order)
+  pool.sort((a, b) => a.properties.id - b.properties.id);
+
+  // Build a seed from today's calendar date (local time): YYYYMMDD
+  const now = new Date();
+  const dateKey = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
+
+  // Hash the date so consecutive days jump around the pool instead of
+  // stepping by one (feels more like a genuine "pick of the day")
+  let h = dateKey;
+  h = (h ^ 61) ^ (h >>> 16);
+  h = h + (h << 3);
+  h = h ^ (h >>> 4);
+  h = Math.abs(h * 0x27d4eb2d);
+  const idx = h % pool.length;
+
+  sotdAnimal = pool[idx];
+
+  if(!sotdAnimal) return;
+  const p = sotdAnimal.properties;
+  const el = document.getElementById('sotd');
+  el.style.display = 'block';
+  document.getElementById('sotd-emoji').textContent = emo(p.species);
+  document.getElementById('sotd-name').textContent = p.name;
+  document.getElementById('sotd-meta').textContent = (p.species || '').replace(/\s*\(.*\)/, '');
+  const lp = p.zping_datetime || p.last_move_datetime;
+  document.getElementById('sotd-ping').textContent = lp ? '📍 Last pinged ' + fmtDate(lp) : '';
+  const img = document.getElementById('sotd-img');
+  if(p.image){ img.src = p.image; img.style.display = 'block'; } else { img.style.display = 'none'; }
+}
+
+function openSotd() {
+  if(sotdAnimal) selectAnimal(sotdAnimal.properties.id);
+}
+
+
+// ── Mobile bottom-sheet behavior ───────────────────────────────────────────
+function toggleSheet() {
+  document.getElementById('sidebar').classList.toggle('open');
+}
+
+// Swipe up/down on the handle area to open/close the sheet
+(function() {
+  const handle = document.getElementById('sheet-handle');
+  if (!handle) return;
+  let startY = null;
+  handle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+  handle.addEventListener('touchend', e => {
+    if (startY === null) return;
+    const dy = e.changedTouches[0].clientY - startY;
+    const sb = document.getElementById('sidebar');
+    if (dy < -25) sb.classList.add('open');       // swiped up
+    else if (dy > 25) sb.classList.remove('open'); // swiped down
+    startY = null;
+  }, { passive: true });
+})();
+
+// Tapping the search box opens the sheet (and doesn't fight the keyboard)
+document.getElementById('srch').addEventListener('focus', () => {
+  if (window.innerWidth <= 720) document.getElementById('sidebar').classList.add('open');
+});
+
+pickSharkOfDay();
+
+
+// ── 3D Globe view ───────────────────────────────────────────────────────────
+let globe = null;
+let is3D = false;
+
+function initGlobe() {
+  if(globe) return;
+  const el = document.getElementById('globe');
+  const w = el.offsetWidth || window.innerWidth - 260;
+  const h = el.offsetHeight || window.innerHeight - 60;
+  globe = Globe()
+    .width(w)
+    .height(h)
+    .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+    .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+    .backgroundColor('#000010')
+    .showAtmosphere(true)
+    .atmosphereColor('#0ea5e9')
+    .atmosphereAltitude(0.18)
+    .pointOfView({ lat: 30, lng: -55, altitude: 2.2 })
+    (el);
+
+  // Auto-rotate slowly
+  globe.controls().autoRotate = true;
+  globe.controls().autoRotateSpeed = 0.4;
+  // Stop auto-rotate on user interaction
+  globe.controls().addEventListener('start', () => { globe.controls().autoRotate = false; });
+
+  // Fill the species legend in 3D too
+  const items = [
+    ['White Shark', '#3b82f6'], ['Tiger', '#f59e0b'], ['Hammerhead', '#ec4899'],
+    ['Mako', '#a855f7'], ['Bull', '#ef4444'], ['Whale Shark', '#14b8a6'],
+    ['Blue Shark', '#06b6d4'], ['Turtle', '#84cc16'],
+  ];
+  document.getElementById('globe-legend').innerHTML =
+    '<div style="font-weight:600;margin-bottom:5px">Species</div>' +
+    items.map(([n,c]) => '<div style="display:flex;align-items:center;gap:5px;margin-bottom:2px"><span style="width:9px;height:9px;border-radius:50%;background:' + c + ';display:inline-block;flex-shrink:0"></span>' + n + '</div>').join('');
+
+  updateGlobeData();
+}
+
+// Live-update the moving shark + growing trail on the globe during playback
+function updateGlobeAnimPosition(curPos, pathCoords) {
+  if(!globe || !sel) return;
+  const col = dotColor(pingAge(sel.properties.zping_datetime || sel.properties.last_move_datetime));
+  // Growing trail path
+  globe
+    .pathsData([{ coords: pathCoords, color: col }])
+    .pathPoints('coords')
+    .pathPointLat(c => c[0])
+    .pathPointLng(c => c[1])
+    .pathColor(d => d.color)
+    .pathStroke(3)
+    .pathTransitionDuration(0);
+  // Moving shark as a ring/point at current position
+  globe
+    .ringsData([{ lat: curPos[0], lng: curPos[1] }])
+    .ringLat('lat').ringLng('lng')
+    .ringColor(() => col)
+    .ringMaxRadius(2.5)
+    .ringPropagationSpeed(2)
+    .ringRepeatPeriod(700);
+}
+
+function updateGlobeData() {
+  if(!globe) return;
+  const vis = visible();
+
+  // Animal points
+  const points = vis.map(f => {
+    const p = f.properties;
+    const [lon, lat] = f.geometry.coordinates;
+    const age = pingAge(p.zping_datetime || p.last_move_datetime);
+    const isSel = sel && sel.properties.id === p.id;
+    return {
+      lat, lng: lon,
+      size: isSel ? 0.6 : 0.3,
+      color: isSel ? '#0ea5e9' : speciesColor(p.species),
+      id: p.id,
+      name: p.name,
+    };
+  });
+
+  globe
+    .pointsData(points)
+    .pointLat('lat').pointLng('lng')
+    .pointColor('color')
+    .pointAltitude(0.01)
+    .pointRadius('size')
+    .pointLabel(d => '<div style="background:#0f172a;color:white;padding:4px 8px;border-radius:6px;font-size:12px;font-family:sans-serif;border:1px solid #334155">' + emo(vis.find(f=>f.properties.id===d.id)?.properties.species) + ' ' + d.name + '</div>')
+    .onPointClick(d => selectAnimal(d.id));
+
+  // Selected trail as a path
+  if(sel && TRAILS[sel.properties.id]?.motion?.length) {
+    const t = TRAILS[sel.properties.id];
+    const col = dotColor(pingAge(sel.properties.zping_datetime || sel.properties.last_move_datetime));
+    const pathData = [{
+      coords: t.motion.map(m => [m.point.coordinates[1], m.point.coordinates[0]]),
+      color: col,
+    }];
+    globe
+      .pathsData(pathData)
+      .pathPoints('coords')
+      .pathPointLat(c => c[0])
+      .pathPointLng(c => c[1])
+      .pathColor(d => d.color)
+      .pathStroke(2.5)
+      .pathDashLength(0.01)
+      .pathDashGap(0.004)
+      .pathDashAnimateTime(20000)
+      .pathTransitionDuration(0);
+  } else {
+    globe.pathsData([]);
+  }
+}
+
+let sstWasOn = false;
+
+function toggleView() {
+  is3D = !is3D;
+  const btn = document.getElementById('view-toggle');
+  if(is3D) {
+    // Remember if SST overlay was on, then remove it so it doesn't
+    // fight the WebGL globe for GPU memory (this was crashing Chrome)
+    sstWasOn = map.hasLayer(sstLayer);
+    if(sstWasOn) { map.removeLayer(sstLayer); sstLegend.remove(); }
+
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('globe').style.display = 'block';
+    document.body.classList.add('is-3d');
+    btn.textContent = '🗺 2D Map';
+
+    // Initialize globe after the map has fully released its tiles
+    setTimeout(() => {
+      initGlobe();
+      const el = document.getElementById('globe');
+      globe.width(el.offsetWidth).height(el.offsetHeight);
+      updateGlobeData();
+    }, 100);
+  } else {
+    document.getElementById('globe').style.display = 'none';
+    document.getElementById('map').style.display = 'block';
+    document.body.classList.remove('is-3d');
+    btn.textContent = '🌐 3D Globe';
+    map.invalidateSize();
+
+    // Restore SST overlay if it was on before
+    if(sstWasOn) { sstLayer.addTo(map); sstLegend.addTo(map); }
+  }
+}
+
+// Resize globe on window resize
+window.addEventListener('resize', () => {
+  if(is3D && globe) {
+    const el = document.getElementById('globe');
+    globe.width(el.offsetWidth).height(el.offsetHeight);
+  }
+});
+
+
+render();
+</script>
+</body>
+</html>
