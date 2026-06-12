@@ -1,0 +1,3632 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.67879,
+          -22.80156
+        ]
+      },
+      "properties": {
+        "id": 288255,
+        "last_update": "2025-08-29T20:33:41.553539Z",
+        "name": "ANZAC",
+        "slug": "anzac",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 8 in.",
+        "weight": null,
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-05-08T19:45:52Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288255/facp4l_3emrng_04242014_ocearch_westernaustralia_0393_60bswhc.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288255/facp4l_3emrng_04242014_ocearch_westernaustralia_0393_60bswhc.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2017-05-29T14:03:03+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3362,
+          -24.20502
+        ]
+      },
+      "properties": {
+        "id": 288267,
+        "last_update": "2025-08-29T20:37:37.443353Z",
+        "name": "Maroochy",
+        "slug": "maroochy",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 9 in.",
+        "weight": "526 lb",
+        "tag_location": "Fraser Island, Australia",
+        "last_move_datetime": "2016-02-26T16:58:25Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288267/ct7uvo_8iz6gz_02042015_ocearch_australia_fraserisland_1009_edqufxz.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288267/ct7uvo_8iz6gz_02042015_ocearch_australia_fraserisland_1009_edqufxz.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2018-12-28T14:30:47+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.72476,
+          -16.231
+        ]
+      },
+      "properties": {
+        "id": 288277,
+        "last_update": "2025-08-29T20:37:16.833482Z",
+        "name": "Trinity",
+        "slug": "trinity",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 7 in.",
+        "weight": "591 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2016-06-03T13:36:03Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288277/j0xiqu_zaudbw_02182015_ocearch_australia_cairns_1969_6ThFc6W.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288277/j0xiqu_zaudbw_02182015_ocearch_australia_cairns_1969_6ThFc6W.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-10-08T08:13:22+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.79858,
+          -19.8644
+        ]
+      },
+      "properties": {
+        "id": 288280,
+        "last_update": "2025-08-29T20:32:03.916080Z",
+        "name": "Bec Piper",
+        "slug": "bec-piper",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft 10 in.",
+        "weight": "141 lb",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2019-04-24T18:36:37Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Hammerhead Shark (Sphyrnidae)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288280/sphyrna_hammerhead_012114_rs_ocearch_galapagos_darwin_0477-copy_CtVDXQn.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288280/sphyrna_hammerhead_012114_rs_ocearch_galapagos_darwin_0477-copy_CtVDXQn.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2020-06-02T00:16:14+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.73509,
+          -22.90337
+        ]
+      },
+      "properties": {
+        "id": 288281,
+        "last_update": "2025-08-29T20:36:59.782717Z",
+        "name": "Alice",
+        "slug": "alice",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 5 in.",
+        "weight": "354 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-06-21T20:08:41Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288281/qtkdfs_pabw8n_9y5rop_05022015_ocearch_westernaustralia_0297_pjdpkfj.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288281/qtkdfs_pabw8n_9y5rop_05022015_ocearch_westernaustralia_0297_pjdpkfj.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-10-27T11:13:11+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.28534,
+          -20.19967
+        ]
+      },
+      "properties": {
+        "id": 288297,
+        "last_update": "2025-08-29T20:34:56.814117Z",
+        "name": "Shayna",
+        "slug": "shayna",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft. 8 in.",
+        "weight": "992 lbs.",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-03-26T06:43:14Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288297/galeocerdo-cuvier_tigershark-tracker-image_X7eGzZn.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288297/galeocerdo-cuvier_tigershark-tracker-image_X7eGzZn.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-05-21T23:33:13+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.28183,
+          -26.16338
+        ]
+      },
+      "properties": {
+        "id": 288298,
+        "last_update": "2025-08-29T20:36:50.956661Z",
+        "name": "Aussie",
+        "slug": "aussie",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "15 ft 4 in.",
+        "weight": "1175 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2017-03-26T07:46:55Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288298/4rcmnj_wymsjd_yknkzr_04302014_ocearch_westernaustralia_0242_1xrw3gf.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288298/4rcmnj_wymsjd_yknkzr_04302014_ocearch_westernaustralia_0242_1xrw3gf.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2017-03-27T10:33:39+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.04291,
+          -9.43102
+        ]
+      },
+      "properties": {
+        "id": 288301,
+        "last_update": "2025-08-29T20:31:41.253249Z",
+        "name": "Zuza",
+        "slug": "zuza",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "8 ft",
+        "weight": "181 lb",
+        "tag_location": "Batt Reef, Australia",
+        "last_move_datetime": "2022-02-22T06:44:40Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288301/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288301/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-02-28T06:56:05+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.29249,
+          -24.47629
+        ]
+      },
+      "properties": {
+        "id": 288304,
+        "last_update": "2025-08-29T20:34:29.403217Z",
+        "name": "Jedda",
+        "slug": "jedda",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 8 in.",
+        "weight": null,
+        "tag_location": "Fraser Island, Australia",
+        "last_move_datetime": "2015-06-20T02:27:13Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288304/cxo5za_xwcfwz_02022015_ocearch_australia_fraserisland_0589_rsrh5ub.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288304/cxo5za_xwcfwz_02022015_ocearch_australia_fraserisland_0589_rsrh5ub.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-04-28T20:00:58+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.78215,
+          -20.87385
+        ]
+      },
+      "properties": {
+        "id": 288306,
+        "last_update": "2025-08-29T20:37:39.017766Z",
+        "name": "Leeuwin",
+        "slug": "leeuwin",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 9 in.",
+        "weight": "416 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2016-11-09T10:49:29Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288306/ifsksk_bflnze_04272014_ocearch_westernaustralia_0415_eku5nxb.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288306/ifsksk_bflnze_04272014_ocearch_westernaustralia_0415_eku5nxb.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2017-03-07T09:47:09+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.51114,
+          -19.95303
+        ]
+      },
+      "properties": {
+        "id": 288307,
+        "last_update": "2025-08-29T20:35:59.164102Z",
+        "name": "Naia",
+        "slug": "naia",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft 11 in.",
+        "weight": "187 lb",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2019-08-21T08:50:40Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288307/galeocerdo-cuvier_tigershark-tracker-image_DyDRGGY.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288307/galeocerdo-cuvier_tigershark-tracker-image_DyDRGGY.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2020-09-24T18:19:52+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.88947,
+          -16.12722
+        ]
+      },
+      "properties": {
+        "id": 288308,
+        "last_update": "2025-08-29T20:36:49.574243Z",
+        "name": "Hannah",
+        "slug": "hannah",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 1 in.",
+        "weight": "315 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2016-01-17T05:22:59Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288308/rdpskz_pyoppt__aaa5868_duutcid.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288308/rdpskz_pyoppt__aaa5868_duutcid.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-11-08T08:15:06+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.93779,
+          -20.40811
+        ]
+      },
+      "properties": {
+        "id": 288315,
+        "last_update": "2025-08-29T20:35:33.978337Z",
+        "name": "Bevan",
+        "slug": "bevan",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 3 in",
+        "weight": null,
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-05-22T20:17:26Z",
+        "stage_of_life": "Adult",
+        "species": "Bull Shark (Carcharhinus leucas)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288315/carcharhinus-leucas_download.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288315/carcharhinus-leucas_download.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2021-04-19T11:38:32+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.95259,
+          -16.47788
+        ]
+      },
+      "properties": {
+        "id": 288323,
+        "last_update": "2025-08-29T20:37:55.325820Z",
+        "name": "CHIPS",
+        "slug": "chips",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "6 ft 9.5 in.",
+        "weight": "88 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2015-08-20T05:27:03Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288323/65yjka_screen-shot-2015-02-17-at-11_30_57-am.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288323/65yjka_screen-shot-2015-02-17-at-11_30_57-am.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-03-23T04:56:38+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.74811,
+          -23.07573
+        ]
+      },
+      "properties": {
+        "id": 288327,
+        "last_update": "2025-08-29T20:37:22.215950Z",
+        "name": "Sunny",
+        "slug": "sunny",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 3 in.",
+        "weight": "962 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-08-02T23:31:11Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288327/aiytty_ayzw84_04262014_ocearch_westernaustralia_0926-copy_f3y0alg.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288327/aiytty_ayzw84_04262014_ocearch_westernaustralia_0926-copy_f3y0alg.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2018-05-19T17:41:51+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.01779,
+          -10.39824
+        ]
+      },
+      "properties": {
+        "id": 288328,
+        "last_update": "2025-08-29T20:31:13.062018Z",
+        "name": "Ned",
+        "slug": "ned",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft 6 in.",
+        "weight": "154 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2015-06-02T16:43:42Z",
+        "stage_of_life": "Juvenile",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288328/x7jfbp_uojh51_02182015_ocearch_australia_cairns_2154_sep3fi3.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288328/x7jfbp_uojh51_02182015_ocearch_australia_cairns_2154_sep3fi3.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2015-09-10T04:59:28+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.60975,
+          -22.39184
+        ]
+      },
+      "properties": {
+        "id": 288336,
+        "last_update": "2025-08-29T20:36:26.497098Z",
+        "name": "Nickol",
+        "slug": "nickol",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 54 in.",
+        "weight": "712.5 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-08-31T19:57:54Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288336/fss8n9_zrizxs_amszy4_05022015_ocearch_westernaustralia_0432_htviubx.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288336/fss8n9_zrizxs_amszy4_05022015_ocearch_westernaustralia_0432_htviubx.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2017-06-14T08:02:11+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.8843,
+          -16.40799
+        ]
+      },
+      "properties": {
+        "id": 288343,
+        "last_update": "2025-08-29T20:37:18.361549Z",
+        "name": "Mackay",
+        "slug": "mackay",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 7 in.",
+        "weight": "291 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2015-09-26T21:19:31Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288343/qontnr_tlwfku_02182015_ocearch_australia_cairns_1458_qboQDr4.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288343/qontnr_tlwfku_02182015_ocearch_australia_cairns_1458_qboQDr4.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-01-26T20:25:51+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.01763,
+          -19.82987
+        ]
+      },
+      "properties": {
+        "id": 288344,
+        "last_update": "2025-08-29T20:35:35.708518Z",
+        "name": "Sero",
+        "slug": "sero",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft. 2 in.",
+        "weight": "631 lbs",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-10-20T23:39:11Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288344/iqqu1p_wh1pki_800px-tiger_shark_bwbqahj.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288344/iqqu1p_wh1pki_800px-tiger_shark_bwbqahj.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-01-07T23:33:09+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.8343,
+          -20.10247
+        ]
+      },
+      "properties": {
+        "id": 288362,
+        "last_update": "2025-08-29T20:34:35.862953Z",
+        "name": "Jon",
+        "slug": "jon",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "8 ft. 7 in.",
+        "weight": "253 lbs.",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2019-12-31T18:51:18Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288362/galeocerdo-cuvier_tigershark-tracker-image_P2OGhx4.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288362/galeocerdo-cuvier_tigershark-tracker-image_P2OGhx4.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2019-08-07T12:43:14+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.17449,
+          -7.20166
+        ]
+      },
+      "properties": {
+        "id": 288363,
+        "last_update": "2025-08-29T20:31:39.945792Z",
+        "name": "GBR1",
+        "slug": "gbr1",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": null,
+        "weight": null,
+        "tag_location": "Batt Reef, Australia",
+        "last_move_datetime": "2019-03-21T14:07:18Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288363/rhincodon-typus_whale-shark-swimming-in-cancun-840x560_e5D1zVl.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288363/rhincodon-typus_whale-shark-swimming-in-cancun-840x560_e5D1zVl.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "N/A",
+        "zping": true,
+        "zping_datetime": "2019-04-23T10:39:46+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.67581,
+          -33.18042
+        ]
+      },
+      "properties": {
+        "id": 288365,
+        "last_update": "2025-08-29T20:36:28.014482Z",
+        "name": "Catalina",
+        "slug": "catalina",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 9 in.",
+        "weight": "795 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2016-05-03T06:41:09Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288365/r6qfrk_pkrm47_nz7rgf_04252014_ocearch_westernaustralia_0664_uwjvilg.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288365/r6qfrk_pkrm47_nz7rgf_04252014_ocearch_westernaustralia_0664_uwjvilg.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2018-05-30T15:20:11+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.88027,
+          -18.62344
+        ]
+      },
+      "properties": {
+        "id": 288378,
+        "last_update": "2025-08-29T20:34:34.631104Z",
+        "name": "Siegi",
+        "slug": "siegi",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "8 ft 7 in.",
+        "weight": "249 lb",
+        "tag_location": "Batt Reef, Australia",
+        "last_move_datetime": "2020-05-13T23:46:17Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288378/galeocerdo-cuvier_tigershark-tracker-image_z49DGuT.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288378/galeocerdo-cuvier_tigershark-tracker-image_z49DGuT.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-05-07T08:15:26+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.74242,
+          -23.09703
+        ]
+      },
+      "properties": {
+        "id": 288382,
+        "last_update": "2025-08-29T20:35:48.014570Z",
+        "name": "Adelaide",
+        "slug": "adelaide",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 7 in.",
+        "weight": "1027 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-06-07T02:14:14Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288382/p7nsrx_gkdmbt_04272014_ocearch_westernaustralia_0487_drfc60m.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288382/p7nsrx_gkdmbt_04272014_ocearch_westernaustralia_0487_drfc60m.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2017-01-23T07:09:20+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.32139,
+          -15.89379
+        ]
+      },
+      "properties": {
+        "id": 288388,
+        "last_update": "2025-08-29T20:37:19.747713Z",
+        "name": "Cathy",
+        "slug": "cathy",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft",
+        "weight": "452 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2016-03-08T05:38:07Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288388/hnfq3u_2wdfx0_02182015_ocearch_australia_cairns_0432_zm43iuu.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288388/hnfq3u_2wdfx0_02182015_ocearch_australia_cairns_0432_zm43iuu.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-04-09T04:58:33+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.72093,
+          -22.83051
+        ]
+      },
+      "properties": {
+        "id": 288392,
+        "last_update": "2025-08-29T20:30:55.028446Z",
+        "name": "Quang",
+        "slug": "quang",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 79 in.",
+        "weight": "268 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-05-29T18:48:23Z",
+        "stage_of_life": "Juvenile",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288392/oedr1f_cb0frq_8mvflm_05022015_ocearch_westernaustralia_0648_mc9zybs.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288392/oedr1f_cb0frq_8mvflm_05022015_ocearch_westernaustralia_0648_mc9zybs.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2015-06-16T21:23:37+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.12668,
+          -20.31509
+        ]
+      },
+      "properties": {
+        "id": 288399,
+        "last_update": "2025-08-29T20:37:20.753553Z",
+        "name": "Kimberley",
+        "slug": "kimberley",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 5 in.",
+        "weight": null,
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-06-19T17:47:39Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288399/paogxr_9iqgxz_04232014_ocearch_westernaustralia_0711_kimberley_8qGIdmj.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288399/paogxr_9iqgxz_04232014_ocearch_westernaustralia_0711_kimberley_8qGIdmj.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2015-10-08T22:05:15+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.83076,
+          -16.36726
+        ]
+      },
+      "properties": {
+        "id": 288425,
+        "last_update": "2025-08-29T20:36:13.266409Z",
+        "name": "Erica",
+        "slug": "erica",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft 6 in.",
+        "weight": "158 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2020-05-17T08:20:58Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288425/galeocerdo-cuvier_tigershark-tracker-image_ZgeQcgq.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288425/galeocerdo-cuvier_tigershark-tracker-image_ZgeQcgq.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-06-10T00:28:07+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.44361,
+          -25.07376
+        ]
+      },
+      "properties": {
+        "id": 288435,
+        "last_update": "2025-08-29T20:35:49.504914Z",
+        "name": "Gnaraloo",
+        "slug": "gnaraloo",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 07 in.",
+        "weight": "835 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-06-24T07:24:37Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288435/m4tihx_cuzxvf_04292014_ocearch_westernaustralia_1199_l4J4Qbh.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288435/m4tihx_cuzxvf_04292014_ocearch_westernaustralia_1199_l4J4Qbh.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-05-23T23:38:34+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.52207,
+          -26.27086
+        ]
+      },
+      "properties": {
+        "id": 288443,
+        "last_update": "2025-08-29T20:32:18.795410Z",
+        "name": "Gareth",
+        "slug": "gareth",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 4 in.",
+        "weight": "485 lbs.",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-06-24T18:52:22Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288443/28wulv_vsmfrc_800px-tiger_shark_73xze5v.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288443/28wulv_vsmfrc_800px-tiger_shark_73xze5v.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2021-03-21T20:14:40+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.42295,
+          -20.46304
+        ]
+      },
+      "properties": {
+        "id": 288448,
+        "last_update": "2025-08-29T20:33:56.498060Z",
+        "name": "Ingo",
+        "slug": "ingo",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "7 ft 6 in.",
+        "weight": "156",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2019-07-31T17:29:18Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288448/galeocerdo-cuvier_tigershark-tracker-image_fJ3Y9w7.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288448/galeocerdo-cuvier_tigershark-tracker-image_fJ3Y9w7.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2019-06-03T07:52:48+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.463623047,
+          20.504209522
+        ]
+      },
+      "properties": {
+        "id": 288456,
+        "last_update": "2025-08-29T20:37:46.459667Z",
+        "name": "Kekoa",
+        "slug": "kekoa",
+        "category": 8496,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Turtles"
+        },
+        "custom_marker": null,
+        "length": "19 in.",
+        "weight": "36.3 lb",
+        "tag_location": "South Maui, HI",
+        "last_move_datetime": "2014-08-20T06:58:01Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Green Sea Turtle (Chelonia mydas)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288456/sokfie_fqqw4f_photo-1_HHJCpct.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288456/sokfie_fqqw4f_photo-1_HHJCpct.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "N/A",
+        "zping": true,
+        "zping_datetime": "2015-08-10T21:32:50+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.022,
+          -20.191
+        ]
+      },
+      "properties": {
+        "id": 288457,
+        "last_update": "2025-08-29T20:32:17.240763Z",
+        "name": "Laura",
+        "slug": "laura",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9 ft 3 in",
+        "weight": "335 lbs.",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-04-25T20:21:47Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288457/0mlzr1_gh010250_moment_general01_Ii35Vph.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288457/0mlzr1_gh010250_moment_general01_Ii35Vph.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-08-15T00:16:53+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.749,
+          -19.9451
+        ]
+      },
+      "properties": {
+        "id": 288492,
+        "last_update": "2025-08-29T20:36:25.003738Z",
+        "name": "Freo",
+        "slug": "freo",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 7 in.",
+        "weight": null,
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2016-09-02T16:34:52Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288492/ynqpfo_nbsqv6_04272014_ocearch_westernaustralia_0325_Lchl4IL.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288492/ynqpfo_nbsqv6_04272014_ocearch_westernaustralia_0325_Lchl4IL.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-11-06T01:15:31+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7545,
+          -16.48548
+        ]
+      },
+      "properties": {
+        "id": 288494,
+        "last_update": "2025-08-29T20:36:29.869521Z",
+        "name": "Katya (tiger shark)",
+        "slug": "katya-tiger-shark",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "8 ft 5 in.",
+        "weight": "242 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2015-10-14T16:44:53Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288494/7dzyjy_bxlqd9__aaa6294_z1YDNUX.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288494/7dzyjy_bxlqd9__aaa6294_z1YDNUX.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2015-11-24T07:24:27+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.65322,
+          -19.83863
+        ]
+      },
+      "properties": {
+        "id": 288505,
+        "last_update": "2025-08-29T20:34:50.087329Z",
+        "name": "Ningaloo",
+        "slug": "ningaloo",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 2 in.",
+        "weight": "868 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-08-23T22:15:31Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288505/22cqdv_9opz1t_04232014_ocearch_westernaustralia_0967_ningaloo_ocaw8lm.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288505/22cqdv_9opz1t_04232014_ocearch_westernaustralia_0967_ningaloo_ocaw8lm.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2019-03-11T08:28:54+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.41454,
+          -14.49287
+        ]
+      },
+      "properties": {
+        "id": 288506,
+        "last_update": "2025-08-29T20:37:58.409172Z",
+        "name": "Perth",
+        "slug": "perth",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft 3 in.",
+        "weight": "1196.4 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-11-15T19:44:10Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288506/lp3znz_rwqjxr_04242014_ocearch_westernaustralia_1588_8AA0BV2.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288506/lp3znz_rwqjxr_04242014_ocearch_westernaustralia_1588_8AA0BV2.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-12-31T14:40:39+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.19165,
+          -16.59927
+        ]
+      },
+      "properties": {
+        "id": 288510,
+        "last_update": "2025-08-29T20:37:56.863095Z",
+        "name": "Zac",
+        "slug": "zac",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 9 in.",
+        "weight": "925 lb",
+        "tag_location": "Cairns, Australia",
+        "last_move_datetime": "2015-08-09T05:03:07Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288510/ekbamp_v8myb3_02142015_ocearch_australia_cairns_0137_FEL8zhn.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288510/ekbamp_v8myb3_02142015_ocearch_australia_cairns_0137_FEL8zhn.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2016-10-31T23:30:02+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.22118,
+          -23.38833
+        ]
+      },
+      "properties": {
+        "id": 288520,
+        "last_update": "2025-08-29T20:35:08.869483Z",
+        "name": "Bindi",
+        "slug": "bindi",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 5 in.",
+        "weight": "518 lb",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2015-07-20T23:06:24Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/288520/vtk6dj_ig97ex_aocugb_04252014_ocearch_westernaustralia_0507_ms68zqn.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/288520/vtk6dj_ig97ex_aocugb_04252014_ocearch_westernaustralia_0507_ms68zqn.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2015-07-09T17:46:01+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.41372,
+          -19.44543
+        ]
+      },
+      "properties": {
+        "id": 384777,
+        "last_update": "2025-08-29T20:36:54.285547Z",
+        "name": "Holly",
+        "slug": "holly",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9i ft 10 in.",
+        "weight": "403 lbs",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-05-19T22:36:25Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384777/galeocerdo-cuvier_tigershark-tracker-image_Hij3V34.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384777/galeocerdo-cuvier_tigershark-tracker-image_Hij3V34.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-12-07T11:33:41+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.56665,
+          -19.04008
+        ]
+      },
+      "properties": {
+        "id": 384778,
+        "last_update": "2025-08-29T20:31:42.465742Z",
+        "name": "Zake",
+        "slug": "zake",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 4 in.",
+        "weight": "661 lbs",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-03-13T08:54:26Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384778/h0tfha_general-tiger_kxuTQc2.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384778/h0tfha_general-tiger_kxuTQc2.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2020-04-04T20:55:15+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.20159,
+          -19.85407
+        ]
+      },
+      "properties": {
+        "id": 384779,
+        "last_update": "2025-08-29T20:34:16.375811Z",
+        "name": "Alara",
+        "slug": "alara",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 11 in.",
+        "weight": "590",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-05-05T20:12:30Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384779/aigw42_screen-shot-2019-12-17-at-2_13_08-pm_LJxXoAQ.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384779/aigw42_screen-shot-2019-12-17-at-2_13_08-pm_LJxXoAQ.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-06-13T06:03:25+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.90933,
+          -11.69166
+        ]
+      },
+      "properties": {
+        "id": 384780,
+        "last_update": "2025-08-29T20:41:35.096272Z",
+        "name": "Jaap",
+        "slug": "jaap",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "24 ft 8 in",
+        "weight": "Unknown",
+        "tag_location": "Great Barrier Reef",
+        "last_move_datetime": "2019-12-28T09:05:36Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384780/rhincodon-typus_whale-shark-swimming-in-cancun-840x560_so4cfU0.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384780/rhincodon-typus_whale-shark-swimming-in-cancun-840x560_so4cfU0.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.04444,
+          -10.20249
+        ]
+      },
+      "properties": {
+        "id": 384781,
+        "last_update": "2025-08-29T20:38:12.913228Z",
+        "name": "Lisa Christina",
+        "slug": "lisa-christina",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 6 in.",
+        "weight": "513 lbs",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-02-21T06:00:10Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384781/d1icju_genera-tiger-2_yRhCcTb.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384781/d1icju_genera-tiger-2_yRhCcTb.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2020-04-14T08:02:00+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.4178,
+          -19.96494
+        ]
+      },
+      "properties": {
+        "id": 384782,
+        "last_update": "2025-08-29T20:31:44.700626Z",
+        "name": "Belinda",
+        "slug": "belinda",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 2 in.",
+        "weight": "851 lbs",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": null,
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/384782/galeocerdo-cuvier_tigershark-tracker-image_DcMwISB.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/384782/galeocerdo-cuvier_tigershark-tracker-image_DcMwISB.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.26368,
+          -18.58432
+        ]
+      },
+      "properties": {
+        "id": 405769,
+        "last_update": "2025-08-29T20:37:45.390119Z",
+        "name": "Grizz",
+        "slug": "grizz",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 10 in.",
+        "weight": "564 lbs.",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-07-18T08:00:03Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/405769/sy8lfl_gh010187_moment_wed22_ny5poQB.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/405769/sy8lfl_gh010187_moment_wed22_ny5poQB.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2020-08-24T23:14:32+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3212,
+          -18.9049
+        ]
+      },
+      "properties": {
+        "id": 405770,
+        "last_update": "2025-08-29T20:32:21.823458Z",
+        "name": "Hanna Marie",
+        "slug": "hanna-marie",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 10 in.",
+        "weight": "771",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2020-05-15T08:42:32Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/405770/oblyas_800px-tiger_shark_fmugyRh.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/405770/oblyas_800px-tiger_shark_fmugyRh.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2020-05-15T07:08:09+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          164.97344,
+          -29.5334
+        ]
+      },
+      "properties": {
+        "id": 406534,
+        "last_update": "2025-08-29T20:31:15.838436Z",
+        "name": "Fitzy",
+        "slug": "fitzy",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft 5 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-05-13T20:52:30Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406534/meph6a_aussie-tiger-2_rTnuoB1.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406534/meph6a_aussie-tiger-2_rTnuoB1.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2021-05-21T06:09:10+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.40375,
+          -22.32009
+        ]
+      },
+      "properties": {
+        "id": 406535,
+        "last_update": "2025-08-29T20:39:37.690268Z",
+        "name": "Headstone",
+        "slug": "headstone",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 5 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-05-07T19:40:05Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406535/galeocerdo-cuvier_tigershark-tracker-image_PdUyaLS.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406535/galeocerdo-cuvier_tigershark-tracker-image_PdUyaLS.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2021-05-07T05:57:51+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.13574,
+          -23.36864
+        ]
+      },
+      "properties": {
+        "id": 406742,
+        "last_update": "2025-08-29T21:00:21.745641Z",
+        "name": "Miamiti",
+        "slug": "miamiti",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "14 ft. 1in",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2020-05-25T17:49:53Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406742/galeocerdo-cuvier_tigershark-tracker-image_pxOtb5z.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406742/galeocerdo-cuvier_tigershark-tracker-image_pxOtb5z.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2020-09-27T11:06:45+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.89508,
+          -25.91906
+        ]
+      },
+      "properties": {
+        "id": 406789,
+        "last_update": "2025-08-29T20:40:52.446757Z",
+        "name": "David",
+        "slug": "david",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft 6 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-01-28T18:55:50Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406789/galeocerdo-cuvier_tigershark-tracker-image_adaZCeG.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406789/galeocerdo-cuvier_tigershark-tracker-image_adaZCeG.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2021-01-26T19:23:52+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.87292,
+          -29.15229
+        ]
+      },
+      "properties": {
+        "id": 406793,
+        "last_update": "2025-08-29T20:38:02.789550Z",
+        "name": "Emma",
+        "slug": "emma",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 4 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-05-13T10:47:48Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406793/i6rql2_aussie-tiger_6racM7V.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406793/i6rql2_aussie-tiger_6racM7V.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-12-04T10:56:03+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.65316,
+          -24.11419
+        ]
+      },
+      "properties": {
+        "id": 406820,
+        "last_update": "2025-08-29T20:32:23.356089Z",
+        "name": "Amy",
+        "slug": "amy",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft 6 in.",
+        "weight": "699 lbs",
+        "tag_location": "Great Barrier Reef",
+        "last_move_datetime": "2020-05-17T11:35:36Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/406820/galeocerdo-cuvier_tigershark-tracker-image_5zpcmBP.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/406820/galeocerdo-cuvier_tigershark-tracker-image_5zpcmBP.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2020-06-14T22:47:22+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.4512,
+          -26.21091
+        ]
+      },
+      "properties": {
+        "id": 407072,
+        "last_update": "2025-08-29T20:32:08.463766Z",
+        "name": "Fletcher",
+        "slug": "fletcher",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft 4 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2022-12-14T06:37:39Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/407072/fvyvpc_screen-shot-2019-12-17-at-2_13_54-pm_x5ynpAa.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/407072/fvyvpc_screen-shot-2019-12-17-at-2_13_54-pm_x5ynpAa.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2024-11-23T00:17:22+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.94919,
+          -25.11385
+        ]
+      },
+      "properties": {
+        "id": 412932,
+        "last_update": "2025-08-29T20:31:43.472391Z",
+        "name": "Tintoela",
+        "slug": "tintoela",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 7 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-06-28T22:07:05Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/412932/galeocerdo-cuvier_tigershark-tracker-image_WTWPz7H.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/412932/galeocerdo-cuvier_tigershark-tracker-image_WTWPz7H.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2021-06-18T09:26:33+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.87709,
+          -28.9979
+        ]
+      },
+      "properties": {
+        "id": 413146,
+        "last_update": "2025-08-29T20:32:24.339802Z",
+        "name": "Koru",
+        "slug": "koru",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-02-22T20:07:04Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/413146/galeocerdo-cuvier_tigershark-tracker-image_rbf0vPd.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/413146/galeocerdo-cuvier_tigershark-tracker-image_rbf0vPd.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-12-19T04:10:12+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.041112901,
+          -26.390162807
+        ]
+      },
+      "properties": {
+        "id": 422455,
+        "last_update": "2026-01-15T12:30:30.440535Z",
+        "name": "Katya",
+        "slug": "katya",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "10 ft 10 in.",
+        "weight": null,
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2025-11-26T13:10:48Z",
+        "stage_of_life": "Adult",
+        "species": "Bull Shark (Carcharhinus leucas)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/422455/carcharhinus-leucas_download.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/422455/carcharhinus-leucas_download.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2026-01-15T11:09:34+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.56946,
+          -19.14075
+        ]
+      },
+      "properties": {
+        "id": 538048,
+        "last_update": "2025-08-29T20:31:01.261682Z",
+        "name": "Norfolk",
+        "slug": "norfolk",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft 4 in.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-12-04T21:38:00Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/538048/galeocerdo-cuvier_tigershark-tracker-image_D3vKPFc.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/538048/galeocerdo-cuvier_tigershark-tracker-image_D3vKPFc.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-12-06T13:16:29+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3752,
+          -23.47536
+        ]
+      },
+      "properties": {
+        "id": 655105,
+        "last_update": "2025-08-29T20:38:14.378791Z",
+        "name": "Kate",
+        "slug": "kate",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.57 ft.",
+        "weight": "est. 963.42 lbs.",
+        "tag_location": "North West Island",
+        "last_move_datetime": "2022-03-15T11:12:25Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/655105/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/655105/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-04-06T22:07:57+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.76426,
+          -23.26873
+        ]
+      },
+      "properties": {
+        "id": 655106,
+        "last_update": "2025-08-29T20:36:37.472233Z",
+        "name": "Collette",
+        "slug": "collette",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.34 ft.",
+        "weight": "est. 901.61 lbs.",
+        "tag_location": "North West Island",
+        "last_move_datetime": "2022-01-05T10:14:30Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/655106/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/655106/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2021-12-30T11:52:10+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.63225,
+          -29.06354
+        ]
+      },
+      "properties": {
+        "id": 655117,
+        "last_update": "2025-08-29T20:36:34.432166Z",
+        "name": "Nomad",
+        "slug": "nomad",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.47 ft. (3.8m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2023-01-19T11:01:25Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/655117/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/655117/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2023-01-19T10:55:45+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.81306,
+          -29.01837
+        ]
+      },
+      "properties": {
+        "id": 657935,
+        "last_update": "2025-08-29T20:33:37.602354Z",
+        "name": "Phillip",
+        "slug": "phillip",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13.78 ft. (4.2m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2022-06-09T06:09:48Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/657935/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/657935/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-06-21T23:38:26+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.94088,
+          -23.01449
+        ]
+      },
+      "properties": {
+        "id": 657952,
+        "last_update": "2025-08-29T20:35:39.470364Z",
+        "name": "Nepean",
+        "slug": "nepean",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13.12 ft.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-08-17T11:04:20Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/657952/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/657952/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-12-06T09:22:01+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          164.77375,
+          -20.31601
+        ]
+      },
+      "properties": {
+        "id": 658080,
+        "last_update": "2025-08-29T20:38:27.524159Z",
+        "name": "Freidi",
+        "slug": "freidi",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.8 ft. (3.9m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-06-06T06:55:40Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/658080/l6if0w_freidi.jpeg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/658080/l6if0w_freidi.jpeg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-06-11T21:28:28+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.97542,
+          -29.06058
+        ]
+      },
+      "properties": {
+        "id": 662567,
+        "last_update": "2025-08-29T20:40:53.406944Z",
+        "name": "Geoff",
+        "slug": "geoff",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.14 ft. (3.7m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-04-04T18:24:48Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/662567/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/662567/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2021-03-27T20:47:59+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.39704,
+          -22.97199
+        ]
+      },
+      "properties": {
+        "id": 663081,
+        "last_update": "2025-08-29T20:32:05.943838Z",
+        "name": "Isla Belle",
+        "slug": "isla-belle",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13.78 ft. (4.2m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2022-08-31T22:32:17Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/663081/ojpmaq_isla-belle.jpeg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/663081/ojpmaq_isla-belle.jpeg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-12-09T11:33:51+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.53895,
+          -29.08456
+        ]
+      },
+      "properties": {
+        "id": 663822,
+        "last_update": "2025-08-29T20:39:27.456852Z",
+        "name": "Jap",
+        "slug": "jap",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.14 ft.",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-11-25T08:10:37Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/663822/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/663822/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2022-06-19T14:56:47+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.28475,
+          -15.44805
+        ]
+      },
+      "properties": {
+        "id": 711247,
+        "last_update": "2025-08-29T20:34:41.124025Z",
+        "name": "Scotty 2",
+        "slug": "scotty-2",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "14.44 ft. (4.4m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2021-11-17T18:03:31Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/711247/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/711247/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2021-12-01T21:38:13+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -178.35747,
+          -17.82232
+        ]
+      },
+      "properties": {
+        "id": 714085,
+        "last_update": "2025-08-29T20:38:28.517752Z",
+        "name": "Nehsi",
+        "slug": "nehsi",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13.12 ft. (4m)",
+        "weight": null,
+        "tag_location": "Norfolk Island",
+        "last_move_datetime": "2022-06-07T21:46:50Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/714085/t73d15_nehsi.jpeg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/714085/t73d15_nehsi.jpeg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2022-06-06T05:25:23+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.46749,
+          -19.50762
+        ]
+      },
+      "properties": {
+        "id": 813615,
+        "last_update": "2025-08-29T20:38:56.350001Z",
+        "name": "Saki",
+        "slug": "saki",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13.45 ft.",
+        "weight": "est. 1228 lbs.",
+        "tag_location": "Great Barrier Reef",
+        "last_move_datetime": "2022-01-26T19:56:09Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/813615/gzh5eo_jojw9676.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/813615/gzh5eo_jojw9676.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2022-01-26T19:53:21+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.66795,
+          -23.99892
+        ]
+      },
+      "properties": {
+        "id": 885626,
+        "last_update": "2026-04-24T07:30:18.698730Z",
+        "name": "Pete",
+        "slug": "pete",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9.08 ft.",
+        "weight": "unknown",
+        "tag_location": "Lady Elliot Island, Australia",
+        "last_move_datetime": "2022-11-21T19:17:34Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/885626/3u9lko_pete-photo_2048x1152.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/885626/3u9lko_pete-photo_2048x1152.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2026-04-24T07:05:52+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.07301,
+          -20.16832
+        ]
+      },
+      "properties": {
+        "id": 885628,
+        "last_update": "2025-08-29T20:38:30.890932Z",
+        "name": "Zozo",
+        "slug": "zozo",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12.3 ft.",
+        "weight": "unknown",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2022-05-04T20:28:10Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/885628/9hhlsj_zozo-photo-1_2048x1636.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/885628/9hhlsj_zozo-photo-1_2048x1636.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-09-30T12:20:47+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.92603,
+          -18.49168
+        ]
+      },
+      "properties": {
+        "id": 885795,
+        "last_update": "2025-08-29T20:38:43.037424Z",
+        "name": "Z-River",
+        "slug": "z-river",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11.55 ft.",
+        "weight": "unknown",
+        "tag_location": "Whitsunday Islands, Australia",
+        "last_move_datetime": "2022-10-19T09:12:43Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/885795/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/885795/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2024-09-10T03:48:26+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.03656,
+          -23.35949
+        ]
+      },
+      "properties": {
+        "id": 894870,
+        "last_update": "2025-08-29T20:38:29.760974Z",
+        "name": "Chloe",
+        "slug": "chloe",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "9.84 ft.",
+        "weight": "unknown",
+        "tag_location": "Lady Elliot Island, Australia",
+        "last_move_datetime": "2022-09-18T07:26:42Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/894870/ltackv_chloe-photo.jpeg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/894870/ltackv_chloe-photo.jpeg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2022-09-18T00:37:49+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3248,
+          -18.42566
+        ]
+      },
+      "properties": {
+        "id": 985813,
+        "last_update": "2025-08-29T20:38:58.456825Z",
+        "name": "Ali",
+        "slug": "ali",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "600 cm",
+        "weight": "1325 kg",
+        "tag_location": "Henry Reef, Australia",
+        "last_move_datetime": "2024-01-15T07:14:50Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/985813/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/985813/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2024-02-20T09:35:21+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.52417,
+          -13.79733
+        ]
+      },
+      "properties": {
+        "id": 985814,
+        "last_update": "2025-08-29T20:38:18.596183Z",
+        "name": "Blancpain",
+        "slug": "blancpain",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "600 cm",
+        "weight": "1325kg",
+        "tag_location": "Henry Reef, Australia",
+        "last_move_datetime": "2023-05-16T09:02:14Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/985814/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/985814/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2024-02-17T10:05:42+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.39769,
+          -12.97915
+        ]
+      },
+      "properties": {
+        "id": 985851,
+        "last_update": "2025-08-29T20:39:28.486155Z",
+        "name": "Fifty Fathoms",
+        "slug": "fifty-fathoms",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "700 cm",
+        "weight": "2013 kg",
+        "tag_location": "Henry Reef, Australia",
+        "last_move_datetime": "2022-01-11T23:11:26Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/985851/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/985851/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2022-01-10T09:24:56+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          155.46993,
+          -17.87828
+        ]
+      },
+      "properties": {
+        "id": 987168,
+        "last_update": "2025-08-29T20:38:31.957386Z",
+        "name": "Alexios",
+        "slug": "alexios",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "600 cm",
+        "weight": "1325 kg",
+        "tag_location": "Henry Reef, Australia",
+        "last_move_datetime": "2022-05-12T21:25:00Z",
+        "stage_of_life": "Sub-Adult",
+        "species": "Whale Shark (Rhincodon typus)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/987168/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/987168/rhincodon-typus_whale-shark-swimming-in-cancun-840x560.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": false,
+        "zping_datetime": "2022-05-08T19:39:35+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.53343,
+          -28.96001
+        ]
+      },
+      "properties": {
+        "id": 1100935,
+        "last_update": "2025-08-29T20:38:04.377143Z",
+        "name": "Kimmy",
+        "slug": "kimmy",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 1in.",
+        "weight": "906 lbs",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2023-04-09T05:43:00Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100935/rhd5a3_tagging_047_0_kimmy_2048x1517.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100935/rhd5a3_tagging_047_0_kimmy_2048x1517.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2024-12-13T06:07:56+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.91756,
+          -29.04458
+        ]
+      },
+      "properties": {
+        "id": 1100943,
+        "last_update": "2025-08-29T20:37:05.103022Z",
+        "name": "Tinka",
+        "slug": "tinka",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft. 3 in.",
+        "weight": "494 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2023-01-12T08:40:44Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100943/5xtyzu_img_0480_tinka_2048x1152.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100943/5xtyzu_img_0480_tinka_2048x1152.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-01-20T20:10:33+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.96183,
+          -28.86855
+        ]
+      },
+      "properties": {
+        "id": 1100944,
+        "last_update": "2025-08-29T20:35:42.940581Z",
+        "name": "Jens",
+        "slug": "jens",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft. 8 in.",
+        "weight": "568 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-03-07T09:55:42Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100944/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100944/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2022-08-08T11:18:04+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.83904,
+          -19.94452
+        ]
+      },
+      "properties": {
+        "id": 1100946,
+        "last_update": "2025-08-29T20:38:48.381743Z",
+        "name": "Sharky McShark Face",
+        "slug": "sharky-mcshark-face",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 5 in.",
+        "weight": "1048 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-03-28T19:50:39Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100946/fmjzaq_tagging_175_0_sharky_mcsharkface_2048x1446.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100946/fmjzaq_tagging_175_0_sharky_mcsharkface_2048x1446.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2022-03-27T20:46:45+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.50055,
+          -28.75647
+        ]
+      },
+      "properties": {
+        "id": 1100952,
+        "last_update": "2025-08-29T20:37:26.625848Z",
+        "name": "Suki",
+        "slug": "suki",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft. 5 in.",
+        "weight": "739 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-10-19T18:43:47Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100952/nfzr5d_tagging_156_0_suki_2048x1488.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100952/nfzr5d_tagging_156_0_suki_2048x1488.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-11-16T21:19:15+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.97685,
+          -29.228
+        ]
+      },
+      "properties": {
+        "id": 1100966,
+        "last_update": "2025-08-29T20:39:01.334919Z",
+        "name": "Jess",
+        "slug": "jess",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 1 in.",
+        "weight": "1139 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-04-19T05:33:17Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100966/tobxgl_img_0612_jess_2048x1476.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100966/tobxgl_img_0612_jess_2048x1476.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2022-04-20T18:56:38+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.72317,
+          -20.11951
+        ]
+      },
+      "properties": {
+        "id": 1100989,
+        "last_update": "2025-08-29T20:39:13.872104Z",
+        "name": "Birgit",
+        "slug": "birgit",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "14 ft. 1 in.",
+        "weight": "1048 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-10-03T18:08:49Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1100989/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1100989/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-09-06T23:09:07+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.4237,
+          -16.35667
+        ]
+      },
+      "properties": {
+        "id": 1101252,
+        "last_update": "2025-08-29T20:35:19.923525Z",
+        "name": "Rocket",
+        "slug": "rocket",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 6 in.",
+        "weight": "1088 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-11-16T20:48:57Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101252/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101252/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-02-07T19:56:50+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.64654,
+          -28.65236
+        ]
+      },
+      "properties": {
+        "id": 1101253,
+        "last_update": "2025-08-29T20:38:20.075758Z",
+        "name": "Lacky",
+        "slug": "lacky",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "11 ft. 6 in.",
+        "weight": "595 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-03-28T10:07:08Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101253/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101253/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Male",
+        "zping": true,
+        "zping_datetime": "2022-04-03T19:56:19+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.44496,
+          -31.74023
+        ]
+      },
+      "properties": {
+        "id": 1101254,
+        "last_update": "2025-08-29T20:38:33.490447Z",
+        "name": "Aatuti",
+        "slug": "aatuti",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 3 in.",
+        "weight": "828 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-12-23T10:10:40Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101254/6x9ouo_tagging_187_0__aatuti_2048x1365.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101254/6x9ouo_tagging_187_0__aatuti_2048x1365.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2022-12-15T18:24:27+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.55739,
+          -32.01686
+        ]
+      },
+      "properties": {
+        "id": 1101388,
+        "last_update": "2025-08-29T20:39:30.243064Z",
+        "name": "Robert",
+        "slug": "robert",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 8 in.",
+        "weight": "970 lbs.",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2023-04-03T20:36:00Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101388/9n9p2x_img_0468_robert_2048x1452.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101388/9n9p2x_img_0468_robert_2048x1452.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2023-03-28T22:40:18+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.91389,
+          -29.14758
+        ]
+      },
+      "properties": {
+        "id": 1101543,
+        "last_update": "2025-08-29T20:37:06.846993Z",
+        "name": "Theodosia",
+        "slug": "theodosia",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft. 6 in.",
+        "weight": "664 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2023-01-24T10:53:50Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101543/egpopz_img_0510_theodosia_2048x1336.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101543/egpopz_img_0510_theodosia_2048x1336.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-04-09T06:06:29+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.25725,
+          -22.81147
+        ]
+      },
+      "properties": {
+        "id": 1101589,
+        "last_update": "2025-08-29T20:38:46.666271Z",
+        "name": "Nate",
+        "slug": "nate",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "12 ft. 4 in.",
+        "weight": "701 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2022-09-20T19:17:30Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1101589/nuxhwk_img_2459_nate_2048x1529.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1101589/nuxhwk_img_2459_nate_2048x1529.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": true,
+        "zping_datetime": "2023-02-04T00:42:57+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.48235,
+          -29.84872
+        ]
+      },
+      "properties": {
+        "id": 1104738,
+        "last_update": "2025-08-29T20:39:02.728740Z",
+        "name": "Tigger",
+        "slug": "tigger",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "13 ft. 5 in.",
+        "weight": "970 lbs.",
+        "tag_location": "Norfolk Island, Australia",
+        "last_move_datetime": "2023-04-15T21:35:57Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1104738/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1104738/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2023-04-02T09:58:38+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.68152,
+          -28.71486
+        ]
+      },
+      "properties": {
+        "id": 1106959,
+        "last_update": "2025-08-29T20:39:04.242014Z",
+        "name": "Ali-Bel",
+        "slug": "ali-bel",
+        "category": 8494,
+        "is_published": true,
+        "flags": [],
+        "rating": null,
+        "voting": null,
+        "category_name": {
+          "en": "Sharks"
+        },
+        "custom_marker": null,
+        "length": "14 ft. 8 in.",
+        "weight": "1259 lbs.",
+        "tag_location": "Ningaloo Reef, Australia",
+        "last_move_datetime": "2023-01-23T08:38:34Z",
+        "stage_of_life": "Adult",
+        "species": "Tiger Shark (Galeocerdo cuvier)",
+        "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/1106959/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+        "image_data": {
+          "path": "https://media.mapotic.com/media/image/geo/3413/1106959/galeocerdo-cuvier_tigershark-tracker-image.jpg",
+          "domain": "ce838d3ec.cloudimg.io"
+        },
+        "gender": "Female",
+        "zping": false,
+        "zping_datetime": "2023-01-10T18:35:31+00:00"
+      }
+    }
+  ]
+}
