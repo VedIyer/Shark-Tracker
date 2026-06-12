@@ -15,22 +15,37 @@ const path = require('path');
 
   const launchOpts = process.env.CI ? { headless: true } : { channel: 'chrome', headless: true };
   const browser = await chromium.launch(launchOpts);
-  const page = await browser.newPage();
 
   let geojson = null;
-  page.on('response', async (r) => {
-    if (r.url().includes('/pois.geojson')) {
-      try { geojson = await r.json(); } catch (e) {}
-    }
-  });
 
-  await page.goto('https://www.ocearch.org/tracker/', { waitUntil: 'networkidle', timeout: 30000 });
-  await page.waitForTimeout(3000);
+  // Try up to 3 times — datacenter IPs (GitHub Actions) sometimes need a few tries
+  for (let attempt = 1; attempt <= 3 && !geojson; attempt++) {
+    if (attempt > 1) console.log(`Retry ${attempt}/3...`);
+    const context = await browser.newContext({
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    });
+    const page = await context.newPage();
+    page.on('response', async (r) => {
+      if (r.url().includes('/pois.geojson')) {
+        try { const j = await r.json(); if (j && j.features) geojson = j; } catch (e) {}
+      }
+    });
+    try {
+      await page.goto('https://www.ocearch.org/tracker/', { waitUntil: 'networkidle', timeout: 45000 });
+      await page.waitForTimeout(5000);
+    } catch (e) {
+      console.log('  page load issue: ' + e.message.split('\n')[0]);
+    }
+    await context.close();
+  }
+
   await browser.close();
 
   if (!geojson) {
-    console.error('Could not fetch animal list. Try again.');
-    process.exit(1);
+    // Don't crash the workflow — just skip the Pacific step and let scraping continue
+    console.warn('Could not fetch animal list (likely blocked from this network).');
+    console.warn('Skipping Pacific discovery; existing animals will still be scraped.');
+    process.exit(0);
   }
 
   console.log(`Total animals worldwide: ${geojson.features.length}\n`);

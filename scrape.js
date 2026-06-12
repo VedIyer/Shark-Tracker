@@ -81,7 +81,9 @@ const CONCURRENCY = 5;
   // Worker: processes animals from a shared queue
   const queue = [...todo];
   async function worker(workerId) {
-    const context = await browser.newContext();
+    const context = await browser.newContext({
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    });
     const page = await context.newPage();
 
     // Block heavy resources we don't need — big speedup
@@ -123,12 +125,12 @@ const CONCURRENCY = 5;
       try {
         // Navigate; don't wait for full networkidle, just DOM + the data response
         await page.goto(`https://www.ocearch.org/tracker/detail/${animal.slug}`, {
-          waitUntil: 'domcontentloaded', timeout: 25000
+          waitUntil: 'domcontentloaded', timeout: 40000
         });
         // Wait up to 12s for the data response (or resolve early when it arrives)
         const pings = await Promise.race([
           dataPromise,
-          new Promise(res => setTimeout(() => res(null), 12000)),
+          new Promise(res => setTimeout(() => res(null), process.env.CI ? 20000 : 12000)),
         ]);
 
         done++;
