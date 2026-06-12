@@ -1,0 +1,11 @@
+{
+  "name": "shark-scraper",
+  "version": "1.0.0",
+  "scripts": {
+    "scrape": "node scrape.js",
+    "bake": "node bake.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
