@@ -1234,7 +1234,6 @@ function removeSharkMesh() {
   if(globe) { try { globe.customLayerData([]); } catch(e){} }
 }
 
-let oceanUniforms = null;   // shader uniforms for animated ocean waves
 function initGlobe() {
   if(globe) return;
   const el = document.getElementById('globe');
@@ -1276,10 +1275,8 @@ function initGlobe() {
     const iv = setInterval(() => { if(setupGlobeLights() || ++tries > 12) clearInterval(iv); }, 120);
   }
 
-  // Tame the globe material + add ocean shimmer via a specular map so the
-  // ANIMATED OCEAN WAVES: inject a time-driven ripple into the globe shader,
-  // applied only over ocean areas (via the water mask). The waves visibly
-  // move across the seas as `oceanTime` advances each frame.
+  // Subtle static ocean texture (no animation, no specular glare). A gentle
+  // fine-grain pattern over the seas so they read as water, not flat paint.
   setTimeout(() => {
     try {
       const T = window.THREE;
@@ -1292,62 +1289,41 @@ function initGlobe() {
           const mat = new T.MeshPhongMaterial({
             map: dayTex,
             color: new T.Color('#bcbcbc'),
-            specular: new T.Color('#000000'),   // no specular glare / hotspot
+            specular: new T.Color('#000000'),
             shininess: 0,
           });
 
-          // Hook the shader to add moving waves over the ocean
+          // Static, fine ocean texture via a non-animated value-noise pattern,
+          // applied only over ocean areas. No time uniform = no moving artifacts.
           mat.onBeforeCompile = (shader) => {
-            shader.uniforms.oceanTime = { value: 0 };
             shader.uniforms.waterMask = { value: waterTex };
-            oceanUniforms = shader.uniforms;   // keep ref so we can animate it
-
-            // Make the map texture coords available + declare uniforms
             shader.fragmentShader = shader.fragmentShader
               .replace(
                 '#include <common>',
                 `#include <common>
-                 uniform float oceanTime;
                  uniform sampler2D waterMask;
-                 varying vec2 vOceanUv;`
+                 varying vec2 vOceanUv;
+                 float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+                 float vnoise(vec2 p){
+                   vec2 i = floor(p), f = fract(p);
+                   float a = hash(i), b = hash(i+vec2(1.0,0.0)), c = hash(i+vec2(0.0,1.0)), d = hash(i+vec2(1.0,1.0));
+                   vec2 u = f*f*(3.0-2.0*f);
+                   return mix(mix(a,b,u.x), mix(c,d,u.x), u.y);
+                 }`
               )
-              // Game-like travelling wave crests sweeping across the ocean
               .replace(
                 '#include <map_fragment>',
                 `#include <map_fragment>
                  float oMask = texture2D(waterMask, vOceanUv).r;
                  if(oMask > 0.3) {
-                   vec3 oceanCol = vec3(0.04, 0.20, 0.42);     // deeper blue base
-                   vec3 crestCol = vec3(0.55, 0.80, 0.95);     // bright crest
-
-                   // Gentle base shimmer so water isn't dead-flat
-                   float base = sin(vOceanUv.x*140.0 + oceanTime*0.8)
-                              * sin(vOceanUv.y*120.0 - oceanTime*0.6);
-
-                   // A few big travelling swell bands. Each is a moving stripe
-                   // that crosses the ocean diagonally, bright at its crest.
-                   float swell = 0.0;
-                   for(int i = 0; i < 3; i++) {
-                     float fi = float(i);
-                     // direction + speed differ per band
-                     float dir = vOceanUv.x*2.2 + vOceanUv.y*(1.5 + fi*0.6);
-                     float phase = oceanTime*(0.25 + fi*0.10) + fi*2.0;
-                     // a sharp moving crest line via a narrow band of a sine
-                     float band = sin(dir*3.14159 + phase);
-                     // sharpen into a crest (smooth pulse near the peak)
-                     float crest = smoothstep(0.86, 1.0, band);
-                     swell += crest;
-                   }
-                   swell = clamp(swell, 0.0, 1.0);
-
-                   // Tint ocean a bit deeper, then add the bright moving crests
-                   diffuseColor.rgb = mix(diffuseColor.rgb, oceanCol, 0.25 * oMask);
-                   diffuseColor.rgb += base * 0.03 * oMask;
-                   diffuseColor.rgb += crestCol * swell * 0.45 * oMask;
+                   vec3 oceanCol = vec3(0.05, 0.22, 0.44);   // deeper, richer blue
+                   // Fine grain: two octaves of static value noise
+                   float n = vnoise(vOceanUv * 260.0) * 0.6 + vnoise(vOceanUv * 620.0) * 0.4;
+                   float grain = (n - 0.5);                  // centered around 0
+                   diffuseColor.rgb = mix(diffuseColor.rgb, oceanCol, 0.30 * oMask);
+                   diffuseColor.rgb += grain * 0.05 * oMask; // subtle texture
                  }`
               );
-
-            // Pass UVs through the vertex shader
             shader.vertexShader = shader.vertexShader
               .replace('#include <common>', '#include <common>\n varying vec2 vOceanUv;')
               .replace('#include <uv_vertex>', '#include <uv_vertex>\n vOceanUv = uv;');
@@ -1375,8 +1351,32 @@ function initGlobe() {
   setupSharkLayer();
   setupStarfield();
   setupBirds();
+  setupClouds();
   startGlobeAmbientLoop();
   updateGlobeData();
+}
+
+// ── Cloud layer (subtle, doesn't hide the trails) ───────────────────────────
+let cloudSphere = null;
+function setupClouds() {
+  const T = window.THREE;
+  if(!globe || !T) return;
+  const loader = new T.TextureLoader();
+  loader.setCrossOrigin('anonymous');
+  // Transparent cloud texture (white clouds on transparent bg)
+  const R = (globe.getGlobeRadius && globe.getGlobeRadius()) || 100;
+  const CLOUDS_ALT = 0.012;   // just above the surface
+  loader.load('https://unpkg.com/three-globe/example/clouds/clouds.png', tex => {
+    const geo = new T.SphereGeometry(R * (1 + CLOUDS_ALT), 64, 64);
+    const mat = new T.MeshPhongMaterial({
+      map: tex,
+      transparent: true,
+      opacity: 0.30,            // light enough that trails stay clearly visible
+      depthWrite: false,
+    });
+    cloudSphere = new T.Mesh(geo, mat);
+    globe.scene().add(cloudSphere);
+  }, undefined, () => { /* clouds optional — ignore load failure */ });
 }
 
 // ── Richer starfield background ─────────────────────────────────────────────
@@ -1468,10 +1468,10 @@ function startGlobeAmbientLoop() {
   let last = performance.now();
   function frame(now) {
     const dt = Math.min(0.05, (now - last)/1000); last = now;
-    // Advance animated ocean waves
-    if(oceanUniforms && oceanUniforms.oceanTime) oceanUniforms.oceanTime.value += dt * 1.0;
     // Slowly rotate the starfield for subtle parallax
     if(starField) starField.rotation.y += dt * 0.005;
+    // Drift clouds slowly (a touch faster than the globe's own spin)
+    if(cloudSphere) cloudSphere.rotation.y += dt * 0.012;
     // Birds
     const flap = now * 0.02;
     birds.forEach(b => {
@@ -1519,6 +1519,7 @@ function updateGlobeAnimPosition(curPos, pathCoords) {
     .pathPoints('coords')
     .pathPointLat(c => c[0])
     .pathPointLng(c => c[1])
+    .pathPointAlt(0.02)
     .pathColor(d => d.color)
     .pathStroke(2.5)
     .pathTransitionDuration(0);
@@ -1579,6 +1580,7 @@ function updateGlobeData() {
       .pathPoints('coords')
       .pathPointLat(c => c[0])
       .pathPointLng(c => c[1])
+      .pathPointAlt(0.02)
       .pathColor(d => d.color)
       .pathStroke(2.5)
       .pathDashLength(0.01)
