@@ -1261,11 +1261,10 @@ function initGlobe() {
   function setupGlobeLights() {
     let found = 0;
     globe.scene().traverse(obj => {
-      if(obj.isAmbientLight)     { obj.intensity = 0.85; obj.color && obj.color.set('#ffffff'); found++; }
+      if(obj.isAmbientLight)     { obj.intensity = 1.0; obj.color && obj.color.set('#ffffff'); found++; }
       if(obj.isDirectionalLight) {
-        obj.intensity = 1.15;
-        // Position the sun so its glint lands on the visible ocean
-        obj.position.set(-1, 0.5, 1);
+        obj.intensity = 0.85;          // softer sun, no harsh hotspot
+        obj.position.set(-1.2, 0.8, 0.6);
         found++;
       }
       if(obj.isHemisphereLight)  { obj.intensity = 0.5; found++; }
@@ -1293,9 +1292,8 @@ function initGlobe() {
           const mat = new T.MeshPhongMaterial({
             map: dayTex,
             color: new T.Color('#bcbcbc'),
-            specularMap: waterTex,
-            specular: new T.Color('#5b86b0'),
-            shininess: 26,
+            specular: new T.Color('#000000'),   // no specular glare / hotspot
+            shininess: 0,
           });
 
           // Hook the shader to add moving waves over the ocean
@@ -1313,19 +1311,39 @@ function initGlobe() {
                  uniform sampler2D waterMask;
                  varying vec2 vOceanUv;`
               )
-              // Add ripple to the diffuse color where it's ocean
+              // Game-like travelling wave crests sweeping across the ocean
               .replace(
                 '#include <map_fragment>',
                 `#include <map_fragment>
                  float oMask = texture2D(waterMask, vOceanUv).r;
                  if(oMask > 0.3) {
-                   // Two travelling sine waves crossing for a rippling look
-                   float w = sin((vOceanUv.x*220.0) + oceanTime*1.6)
-                           * cos((vOceanUv.y*180.0) - oceanTime*1.2);
-                   float w2 = sin((vOceanUv.x*90.0 - vOceanUv.y*120.0) + oceanTime*2.1);
-                   float ripple = (w*0.5 + w2*0.5);
-                   vec3 crest = vec3(0.35, 0.55, 0.75);   // light blue crest tint
-                   diffuseColor.rgb += crest * ripple * 0.06 * oMask;
+                   vec3 oceanCol = vec3(0.04, 0.20, 0.42);     // deeper blue base
+                   vec3 crestCol = vec3(0.55, 0.80, 0.95);     // bright crest
+
+                   // Gentle base shimmer so water isn't dead-flat
+                   float base = sin(vOceanUv.x*140.0 + oceanTime*0.8)
+                              * sin(vOceanUv.y*120.0 - oceanTime*0.6);
+
+                   // A few big travelling swell bands. Each is a moving stripe
+                   // that crosses the ocean diagonally, bright at its crest.
+                   float swell = 0.0;
+                   for(int i = 0; i < 3; i++) {
+                     float fi = float(i);
+                     // direction + speed differ per band
+                     float dir = vOceanUv.x*2.2 + vOceanUv.y*(1.5 + fi*0.6);
+                     float phase = oceanTime*(0.25 + fi*0.10) + fi*2.0;
+                     // a sharp moving crest line via a narrow band of a sine
+                     float band = sin(dir*3.14159 + phase);
+                     // sharpen into a crest (smooth pulse near the peak)
+                     float crest = smoothstep(0.86, 1.0, band);
+                     swell += crest;
+                   }
+                   swell = clamp(swell, 0.0, 1.0);
+
+                   // Tint ocean a bit deeper, then add the bright moving crests
+                   diffuseColor.rgb = mix(diffuseColor.rgb, oceanCol, 0.25 * oMask);
+                   diffuseColor.rgb += base * 0.03 * oMask;
+                   diffuseColor.rgb += crestCol * swell * 0.45 * oMask;
                  }`
               );
 
@@ -1451,7 +1469,7 @@ function startGlobeAmbientLoop() {
   function frame(now) {
     const dt = Math.min(0.05, (now - last)/1000); last = now;
     // Advance animated ocean waves
-    if(oceanUniforms && oceanUniforms.oceanTime) oceanUniforms.oceanTime.value += dt * 1.8;
+    if(oceanUniforms && oceanUniforms.oceanTime) oceanUniforms.oceanTime.value += dt * 1.0;
     // Slowly rotate the starfield for subtle parallax
     if(starField) starField.rotation.y += dt * 0.005;
     // Birds
