@@ -152,13 +152,23 @@ const CONCURRENCY = 5;
     console.log(`Loaded ${Object.keys(results).length} existing trails`);
   }
 
-  // Only scrape animals we don't already have
-  const todo = ANIMALS.filter(a => !(results[a.id]?.motion?.length > 0));
+  // Re-fetch animals whose cached data is stale (or missing). This keeps trails
+  // current instead of caching them forever. Set REFRESH_ALL=1 to force-refresh all.
+  const STALE_HOURS = 20;
+  const now = Date.now();
+  const forceAll = process.env.REFRESH_ALL === '1';
+  const todo = ANIMALS.filter(a => {
+    const cached = results[a.id];
+    if (!cached || !(cached.motion?.length > 0)) return true;     // missing data
+    if (forceAll) return true;
+    const ageHours = (now - (cached.fetchedAt || 0)) / 3.6e6;     // no stamp => infinitely old
+    return ageHours >= STALE_HOURS;                               // stale => refresh
+  });
   const skipped = ANIMALS.length - todo.length;
-  console.log(`${todo.length} to fetch, ${skipped} already cached, ${CONCURRENCY} at a time\n`);
+  console.log(`${todo.length} to fetch, ${skipped} fresh (cached < ${STALE_HOURS}h), ${CONCURRENCY} at a time\n`);
 
   if (todo.length === 0) {
-    console.log('Everything already scraped! Running bake...');
+    console.log('Everything is fresh (recently scraped)! Running bake...');
     require('./bake.js');
     return;
   }
@@ -206,7 +216,7 @@ const CONCURRENCY = 5;
           try {
             const data = await response.json();
             if (data.motion?.length > 0) {
-              results[animal.id] = { name: animal.name, motion: data.motion, log: data.log };
+              results[animal.id] = { name: animal.name, motion: data.motion, log: data.log, fetchedAt: Date.now() };
               fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results));
               resolveData(data.motion.length);
             }

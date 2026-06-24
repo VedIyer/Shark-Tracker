@@ -43,7 +43,8 @@ if (fs.existsSync(PACIFIC_FILE)) {
   }
 }
 
-// Inject trails
+// Inject trails (idempotent — remove any prior injection so re-runs don't stack)
+html = html.replace(/window\._TRAILS = \{[\s\S]*?\};\n/, '');
 const trailsJs = `window._TRAILS = ${JSON.stringify(trails)};`;
 html = html.replace('const TRAILS = window._TRAILS || {};', `${trailsJs}\nconst TRAILS = window._TRAILS || {};`);
 
@@ -51,5 +52,4 @@ fs.writeFileSync(TRACKER, html);
 
 const count = Object.keys(trails).length;
 const totalPings = Object.values(trails).reduce((s, t) => s + (t.motion?.length || 0), 0);
-console.log(`Baked ${count} trails (${totalPings.toLocaleString()} pings) into shark-tracker.html`);
-console.log('Open shark-tracker.html in your browser!');
+console.log(`Baked ${count} trails (${totalPings.toLocaleString()} pings) into index.html`);
