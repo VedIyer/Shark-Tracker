@@ -2,7 +2,7 @@
 
 A live, interactive shark tracker built on real OCEARCH data. Shows animal positions, full migration trails with smooth animated playback, a 2D ocean map, and a 3D globe view.
 
-**Live site:** `https://YOUR-USERNAME.github.io/REPO-NAME/`
+**Live site:** https://vediyer.github.io/Shark-Tracker/
 
 ---
 
