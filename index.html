@@ -1234,6 +1234,7 @@ function removeSharkMesh() {
   if(globe) { try { globe.customLayerData([]); } catch(e){} }
 }
 
+let oceanUniforms = null;   // shader uniforms for animated ocean waves
 function initGlobe() {
   if(globe) return;
   const el = document.getElementById('globe');
@@ -1256,47 +1257,90 @@ function initGlobe() {
   globe.controls().autoRotateSpeed = 0.4;
   globe.controls().addEventListener('start', () => { globe.controls().autoRotate = false; });
 
-  // Tone down Globe.gl's default lighting (the bundled Three + r147 combo
-  // renders the default lights very bright / blown out). Set explicit low
-  // intensities, and retry after a tick since lights are added asynchronously.
-  function dimGlobeLights() {
+  // Tone down Globe.gl's default lighting and retry as lights load async.
+  function setupGlobeLights() {
     let found = 0;
     globe.scene().traverse(obj => {
-      if(obj.isAmbientLight)     { obj.intensity = 0.9; obj.color && obj.color.set('#ffffff'); found++; }
-      if(obj.isDirectionalLight) { obj.intensity = 1.1; found++; }
+      if(obj.isAmbientLight)     { obj.intensity = 0.85; obj.color && obj.color.set('#ffffff'); found++; }
+      if(obj.isDirectionalLight) {
+        obj.intensity = 1.15;
+        // Position the sun so its glint lands on the visible ocean
+        obj.position.set(-1, 0.5, 1);
+        found++;
+      }
       if(obj.isHemisphereLight)  { obj.intensity = 0.5; found++; }
     });
     return found;
   }
-  // Try now and a few more times as the scene finishes initialising
-  if(!dimGlobeLights()) {
+  if(!setupGlobeLights()) {
     let tries = 0;
-    const iv = setInterval(() => { if(dimGlobeLights() || ++tries > 10) clearInterval(iv); }, 120);
+    const iv = setInterval(() => { if(setupGlobeLights() || ++tries > 12) clearInterval(iv); }, 120);
   }
 
   // Tame the globe material + add ocean shimmer via a specular map so the
-  // seas catch the light and glint as the globe turns.
+  // ANIMATED OCEAN WAVES: inject a time-driven ripple into the globe shader,
+  // applied only over ocean areas (via the water mask). The waves visibly
+  // move across the seas as `oceanTime` advances each frame.
   setTimeout(() => {
     try {
       const T = window.THREE;
-      const mat = globe.globeMaterial();
-      if(mat) {
-        if(mat.color) mat.color.set('#b8b8b8');
-        // Water specular map (oceans reflective, land matte)
-        if(T) {
-          const loader = new T.TextureLoader();
-          loader.setCrossOrigin('anonymous');
-          loader.load('https://unpkg.com/three-globe/example/img/earth-water.png', tex => {
-            mat.specularMap = tex;
-            mat.specular = new T.Color('#3a6ea5');   // bluish ocean glint
-            mat.shininess = 22;
-            mat.needsUpdate = true;
+      if(!T) return;
+      const loader = new T.TextureLoader();
+      loader.setCrossOrigin('anonymous');
+
+      loader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg', dayTex => {
+        loader.load('https://unpkg.com/three-globe/example/img/earth-water.png', waterTex => {
+          const mat = new T.MeshPhongMaterial({
+            map: dayTex,
+            color: new T.Color('#bcbcbc'),
+            specularMap: waterTex,
+            specular: new T.Color('#5b86b0'),
+            shininess: 26,
           });
-        } else {
-          mat.shininess = 4;
-        }
-        mat.needsUpdate = true;
-      }
+
+          // Hook the shader to add moving waves over the ocean
+          mat.onBeforeCompile = (shader) => {
+            shader.uniforms.oceanTime = { value: 0 };
+            shader.uniforms.waterMask = { value: waterTex };
+            oceanUniforms = shader.uniforms;   // keep ref so we can animate it
+
+            // Make the map texture coords available + declare uniforms
+            shader.fragmentShader = shader.fragmentShader
+              .replace(
+                '#include <common>',
+                `#include <common>
+                 uniform float oceanTime;
+                 uniform sampler2D waterMask;
+                 varying vec2 vOceanUv;`
+              )
+              // Add ripple to the diffuse color where it's ocean
+              .replace(
+                '#include <map_fragment>',
+                `#include <map_fragment>
+                 float oMask = texture2D(waterMask, vOceanUv).r;
+                 if(oMask > 0.3) {
+                   // Two travelling sine waves crossing for a rippling look
+                   float w = sin((vOceanUv.x*220.0) + oceanTime*1.6)
+                           * cos((vOceanUv.y*180.0) - oceanTime*1.2);
+                   float w2 = sin((vOceanUv.x*90.0 - vOceanUv.y*120.0) + oceanTime*2.1);
+                   float ripple = (w*0.5 + w2*0.5);
+                   vec3 crest = vec3(0.35, 0.55, 0.75);   // light blue crest tint
+                   diffuseColor.rgb += crest * ripple * 0.06 * oMask;
+                 }`
+              );
+
+            // Pass UVs through the vertex shader
+            shader.vertexShader = shader.vertexShader
+              .replace('#include <common>', '#include <common>\n varying vec2 vOceanUv;')
+              .replace('#include <uv_vertex>', '#include <uv_vertex>\n vOceanUv = uv;');
+          };
+
+          try { globe.globeMaterial(mat); } catch(e){}
+        }, undefined, () => {});
+      }, undefined, () => {
+        const m = globe.globeMaterial();
+        if(m && m.color) { m.color.set('#bcbcbc'); m.needsUpdate = true; }
+      });
     } catch(e){}
   }, 300);
 
@@ -1406,6 +1450,8 @@ function startGlobeAmbientLoop() {
   let last = performance.now();
   function frame(now) {
     const dt = Math.min(0.05, (now - last)/1000); last = now;
+    // Advance animated ocean waves
+    if(oceanUniforms && oceanUniforms.oceanTime) oceanUniforms.oceanTime.value += dt * 1.8;
     // Slowly rotate the starfield for subtle parallax
     if(starField) starField.rotation.y += dt * 0.005;
     // Birds
