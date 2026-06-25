@@ -26,8 +26,8 @@ jobs:
       - name: Install Playwright's Chromium browser
         run: npx playwright install --with-deps chromium
 
-      - name: Find Asia/Pacific-region animals and add them
-        run: node find-pacific.js
+      - name: Fetch the full OCEARCH animal roster (all regions)
+        run: node fetch-all-animals.js
         env:
           CI: 'true'
 
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html trails.json scrape.js pacific-animals.json 2>/dev/null || git add index.html trails.json
+          git add index.html trails.json scrape.js all-animals.json pacific-animals.json 2>/dev/null || git add index.html trails.json scrape.js
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
