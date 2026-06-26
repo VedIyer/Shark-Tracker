@@ -17400,13 +17400,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.30075,
-          39.1566
+          -75.29004,
+          39.12408
         ]
       },
       "properties": {
         "id": 2812557,
-        "last_update": "2026-06-26T04:30:17.204497Z",
+        "last_update": "2026-06-26T06:00:22.153389Z",
         "name": "Wassaw Will",
         "slug": "wassaw-will",
         "category": 8496,
@@ -17421,7 +17421,7 @@
         "length": "3 ft. 3 in.",
         "weight": null,
         "tag_location": "Wassaw National Wildlife Refuge",
-        "last_move_datetime": "2026-06-26T03:56:25Z",
+        "last_move_datetime": "2026-06-26T05:25:23Z",
         "stage_of_life": "Adult",
         "species": "Loggerhead Sea Turtle (Caretta caretta)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2812557/ece5ja-wassaw-will-v2.jpg",
@@ -17985,13 +17985,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.06251,
-          36.17147
+          -75.02592,
+          36.29709
         ]
       },
       "properties": {
         "id": 3551617,
-        "last_update": "2026-06-25T13:00:23.957042Z",
+        "last_update": "2026-06-26T06:30:17.195623Z",
         "name": "Tupelo",
         "slug": "tupelo",
         "category": 8496,
@@ -18006,7 +18006,7 @@
         "length": "4 ft. 11 in.",
         "weight": "630 lbs.",
         "tag_location": "Jupiter Beach, Florida, USA",
-        "last_move_datetime": "2026-06-25T11:57:28Z",
+        "last_move_datetime": "2026-06-26T05:24:13Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3551617/yrofva-tupelo.jpeg",
@@ -18024,13 +18024,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.44378,
-          36.43352
+          -75.27423,
+          36.69259
         ]
       },
       "properties": {
         "id": 3552504,
-        "last_update": "2026-06-25T11:00:22.863042Z",
+        "last_update": "2026-06-26T06:30:16.387544Z",
         "name": "Tallulah",
         "slug": "tallulah",
         "category": 8496,
@@ -18045,7 +18045,7 @@
         "length": "5 ft. 3 in.",
         "weight": "990 lbs.",
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-06-25T10:20:57Z",
+        "last_move_datetime": "2026-06-26T05:33:20Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552504/lh2khp-tallulah.jpeg",
