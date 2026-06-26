@@ -17400,13 +17400,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.30334,
-          39.15864
+          -75.30075,
+          39.1566
         ]
       },
       "properties": {
         "id": 2812557,
-        "last_update": "2026-06-26T04:00:18.079966Z",
+        "last_update": "2026-06-26T04:30:17.204497Z",
         "name": "Wassaw Will",
         "slug": "wassaw-will",
         "category": 8496,
@@ -17421,7 +17421,7 @@
         "length": "3 ft. 3 in.",
         "weight": null,
         "tag_location": "Wassaw National Wildlife Refuge",
-        "last_move_datetime": "2026-06-26T03:41:15Z",
+        "last_move_datetime": "2026-06-26T03:56:25Z",
         "stage_of_life": "Adult",
         "species": "Loggerhead Sea Turtle (Caretta caretta)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2812557/ece5ja-wassaw-will-v2.jpg",
@@ -17913,7 +17913,7 @@
       },
       "properties": {
         "id": 3467308,
-        "last_update": "2026-06-26T04:00:17.787414Z",
+        "last_update": "2026-06-26T04:30:13.853155Z",
         "name": "LYS",
         "slug": "lys",
         "category": 8494,
