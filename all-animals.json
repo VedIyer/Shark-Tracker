@@ -17400,13 +17400,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.29644,
-          39.12982
+          -75.30059,
+          39.13212
         ]
       },
       "properties": {
         "id": 2812557,
-        "last_update": "2026-06-27T01:30:19.938182Z",
+        "last_update": "2026-06-27T02:00:17.462727Z",
         "name": "Wassaw Will",
         "slug": "wassaw-will",
         "category": 8496,
@@ -17421,7 +17421,7 @@
         "length": "3 ft. 3 in.",
         "weight": null,
         "tag_location": "Wassaw National Wildlife Refuge",
-        "last_move_datetime": "2026-06-27T01:16:46Z",
+        "last_move_datetime": "2026-06-27T01:45:37Z",
         "stage_of_life": "Adult",
         "species": "Loggerhead Sea Turtle (Caretta caretta)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2812557/ece5ja-wassaw-will-v2.jpg",
@@ -17673,13 +17673,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.38907,
-          40.10461
+          -68.27679,
+          40.43994
         ]
       },
       "properties": {
         "id": 2885826,
-        "last_update": "2026-06-27T01:30:20.151255Z",
+        "last_update": "2026-06-27T02:00:17.680500Z",
         "name": "Goodall",
         "slug": "goodall",
         "category": 8494,
@@ -17694,7 +17694,7 @@
         "length": "13 ft. 1 in.",
         "weight": "1,393 lbs.",
         "tag_location": "Mahone Bay, Nova Scotia",
-        "last_move_datetime": "2026-06-27T01:18:53Z",
+        "last_move_datetime": "2026-06-27T01:41:16Z",
         "stage_of_life": "Adult",
         "species": "White Shark (Carcharodon carcharias)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2885826/qvgjcw-goodall-2-cropped.jpg",
