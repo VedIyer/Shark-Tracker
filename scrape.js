@@ -472,7 +472,6 @@ const ANIMALS = [
   { name: 'Parm', slug: 'parm', id: 3665776 },
   { name: 'Mozzarella', slug: 'mozzarella', id: 3665777 },
   { name: 'Elsa', slug: 'elsa', id: 3665866 },
-  { name: 'Theresa', slug: 'theresa', id: 3800603 },
 ];
 
 const OUTPUT_FILE = path.join(__dirname, 'trails.json');
