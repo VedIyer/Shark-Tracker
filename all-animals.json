@@ -13032,13 +13032,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.29839,
-          34.68363
+          -70.02398,
+          34.49681
         ]
       },
       "properties": {
         "id": 544541,
-        "last_update": "2026-08-29T03:00:23.051122Z",
+        "last_update": "2026-08-31T05:00:23.771287Z",
         "name": "Breton",
         "slug": "breton",
         "category": 8494,
@@ -13053,7 +13053,7 @@
         "length": "13 ft 3 in.",
         "weight": "1,437 lbs",
         "tag_location": "Scatarie Island, Nova Scotia",
-        "last_move_datetime": "2026-08-29T01:19:31.048000Z",
+        "last_move_datetime": "2026-08-31T00:43:32.249000Z",
         "stage_of_life": "Adult",
         "species": "White Shark (Carcharodon carcharias)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/544541/slshmw_09122020_ocearch_novascotia_scatarieisland_0749-copy_seTzp18.jpg",
@@ -13063,7 +13063,7 @@
         },
         "gender": "Male",
         "zping": true,
-        "zping_datetime": "2026-08-29T01:38:13.277000+00:00"
+        "zping_datetime": "2026-08-31T04:04:38.401000+00:00"
       }
     },
     {
@@ -14904,13 +14904,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.5897,
-          28.67234
+          -65.94765,
+          43.61982
         ]
       },
       "properties": {
         "id": 867210,
-        "last_update": "2026-08-23T01:00:18.701668Z",
+        "last_update": "2026-08-31T14:00:32.817403Z",
         "name": "Bob",
         "slug": "bob",
         "category": 8494,
@@ -14925,7 +14925,7 @@
         "length": "13 ft. 4 in.",
         "weight": "1,308 lbs.",
         "tag_location": "Ironbound Island, Nova Scotia",
-        "last_move_datetime": "2025-01-05T02:11:42Z",
+        "last_move_datetime": "2026-08-10T01:31:31Z",
         "stage_of_life": "Adult",
         "species": "White Shark (Carcharodon carcharias)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/867210/mghlh8_photo-1_2048x1365.jpg",
@@ -14935,7 +14935,7 @@
         },
         "gender": "Male",
         "zping": true,
-        "zping_datetime": "2026-08-23T00:24:23+00:00"
+        "zping_datetime": "2026-08-30T21:43:24+00:00"
       }
     },
     {
@@ -16041,7 +16041,7 @@
       },
       "properties": {
         "id": 1480119,
-        "last_update": "2026-08-27T01:00:24.224790Z",
+        "last_update": "2026-08-31T01:00:23.583968Z",
         "name": "Ormond",
         "slug": "ormond",
         "category": 8494,
@@ -16066,7 +16066,7 @@
         },
         "gender": "Male",
         "zping": true,
-        "zping_datetime": "2026-08-27T00:20:01.118000+00:00"
+        "zping_datetime": "2026-08-31T00:07:17.072000+00:00"
       }
     },
     {
@@ -16971,13 +16971,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.62712,
-          49.00827
+          -60.56969,
+          49.92145
         ]
       },
       "properties": {
         "id": 2344847,
-        "last_update": "2026-08-27T05:30:23.366550Z",
+        "last_update": "2026-08-31T09:00:30.242105Z",
         "name": "Contender",
         "slug": "contender",
         "category": 8494,
@@ -16992,7 +16992,7 @@
         "length": "13 ft. 9 in.",
         "weight": "1653 lbs.",
         "tag_location": "Offshore of FL/GA border",
-        "last_move_datetime": "2026-08-27T03:54:43.465000Z",
+        "last_move_datetime": "2026-08-31T07:45:42.764000Z",
         "stage_of_life": "Adult",
         "species": "White Shark (Carcharodon carcharias)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2344847/czugok-1-17-2025-ongoing-field-research-whiteshark-contender-color-adjusted.png",
@@ -17002,7 +17002,7 @@
         },
         "gender": "Male",
         "zping": false,
-        "zping_datetime": "2026-08-23T23:59:05.662000+00:00"
+        "zping_datetime": "2026-08-31T01:31:27+00:00"
       }
     },
     {
@@ -17133,7 +17133,7 @@
       },
       "properties": {
         "id": 2548468,
-        "last_update": "2026-08-26T23:00:24.258687Z",
+        "last_update": "2026-08-29T23:00:22.475940Z",
         "name": "Mira",
         "slug": "mira",
         "category": 8494,
@@ -17158,7 +17158,7 @@
         },
         "gender": "Female",
         "zping": true,
-        "zping_datetime": "2026-08-26T22:44:14+00:00"
+        "zping_datetime": "2026-08-29T21:29:04.197000+00:00"
       }
     },
     {
@@ -17244,13 +17244,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -49.96716,
-          44.31412
+          -50.18833,
+          44.14078
         ]
       },
       "properties": {
         "id": 2790722,
-        "last_update": "2026-08-29T01:30:15.118732Z",
+        "last_update": "2026-08-30T10:00:31.702216Z",
         "name": "Baker",
         "slug": "baker",
         "category": 8494,
@@ -17265,7 +17265,7 @@
         "length": "12 ft. 10 in.",
         "weight": "1,429 lbs",
         "tag_location": "Mahone Bay, Nova Scotia",
-        "last_move_datetime": "2026-08-28T23:59:18.177000Z",
+        "last_move_datetime": "2026-08-30T07:19:26.340000Z",
         "stage_of_life": "Adult",
         "species": "White Shark (Carcharodon carcharias)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/2790722/kfteip-baker-pic-cropped-v2.jpeg",
@@ -17985,13 +17985,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.91585,
-          37.49853
+          -75.13096,
+          37.60149
         ]
       },
       "properties": {
         "id": 3551617,
-        "last_update": "2026-08-29T09:00:32.895751Z",
+        "last_update": "2026-08-31T09:00:31.403801Z",
         "name": "Tupelo",
         "slug": "tupelo",
         "category": 8496,
@@ -18006,7 +18006,7 @@
         "length": "4 ft. 11 in.",
         "weight": "630 lbs.",
         "tag_location": "Jupiter Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T07:58:30.280000Z",
+        "last_move_datetime": "2026-08-31T08:20:08.607000Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3551617/yrofva-tupelo.jpeg",
@@ -18015,8 +18015,8 @@
           "domain": "ce838d3ec.cloudimg.io"
         },
         "gender": "Female",
-        "zping": false,
-        "zping_datetime": "2026-08-29T07:30:26.781000+00:00"
+        "zping": true,
+        "zping_datetime": "2026-08-31T08:20:42.107000+00:00"
       }
     },
     {
@@ -18024,13 +18024,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.93748,
-          43.29344
+          -68.66108,
+          43.13611
         ]
       },
       "properties": {
         "id": 3552504,
-        "last_update": "2026-08-29T09:00:32.301231Z",
+        "last_update": "2026-08-31T14:00:35.795845Z",
         "name": "Tallulah",
         "slug": "tallulah",
         "category": 8496,
@@ -18045,7 +18045,7 @@
         "length": "5 ft. 3 in.",
         "weight": "990 lbs.",
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T07:51:51.040000Z",
+        "last_move_datetime": "2026-08-31T09:43:48.992000Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552504/lh2khp-tallulah.jpeg",
@@ -18055,7 +18055,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-08-29T07:25:42.526000+00:00"
+        "zping_datetime": "2026-08-30T08:27:19.774000+00:00"
       }
     },
     {
@@ -18063,13 +18063,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.26651,
-          32.45378
+          -79.27848,
+          32.45496
         ]
       },
       "properties": {
         "id": 3552505,
-        "last_update": "2026-08-29T14:00:36.434745Z",
+        "last_update": "2026-08-31T16:00:38.310831Z",
         "name": "Priscilla",
         "slug": "priscilla",
         "category": 8496,
@@ -18084,7 +18084,7 @@
         "length": "5 ft. 7 in.",
         "weight": "840 lbs.",
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T13:29:43Z",
+        "last_move_datetime": "2026-08-31T15:28:12.804000Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552505/6od6lv-priscilla-cropped.jpeg",
@@ -18094,7 +18094,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-08-29T12:23:19.760000+00:00"
+        "zping_datetime": "2026-08-31T13:28:52.306000+00:00"
       }
     },
     {
@@ -18102,13 +18102,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.03838,
-          26.88091
+          -80.0434,
+          26.88459
         ]
       },
       "properties": {
         "id": 3665757,
-        "last_update": "2026-08-29T14:00:36.087736Z",
+        "last_update": "2026-08-31T16:00:37.649138Z",
         "name": "Brie",
         "slug": "brie",
         "category": 8496,
@@ -18123,7 +18123,7 @@
         "length": "3 ft. 9 in.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T13:18:58.222000Z",
+        "last_move_datetime": "2026-08-31T15:17:09.571000Z",
         "stage_of_life": "Adult",
         "species": "Green Sea Turtle (Chelonia mydas)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665757/yreust-brie-edited-for-tracker.jpeg",
@@ -18132,8 +18132,8 @@
           "domain": "ce838d3ec.cloudimg.io"
         },
         "gender": "Female",
-        "zping": true,
-        "zping_datetime": "2026-08-29T13:21:21.742000+00:00"
+        "zping": false,
+        "zping_datetime": "2026-08-31T13:20:25.567000+00:00"
       }
     },
     {
@@ -18141,13 +18141,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.94463,
-          24.6892
+          -80.9489,
+          24.68763
         ]
       },
       "properties": {
         "id": 3665775,
-        "last_update": "2026-08-29T13:00:41.572772Z",
+        "last_update": "2026-08-31T13:00:37.445847Z",
         "name": "Pesto",
         "slug": "pesto",
         "category": 8496,
@@ -18162,7 +18162,7 @@
         "length": "3 ft. 10 in.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T12:12:25.134000Z",
+        "last_move_datetime": "2026-08-31T11:52:33.527000Z",
         "stage_of_life": "Adult",
         "species": "Green Sea Turtle (Chelonia mydas)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665775/gbev9c-pesto-edited-for-tracker.jpeg",
@@ -18172,7 +18172,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-08-29T10:24:59.134000+00:00"
+        "zping_datetime": "2026-08-31T11:26:03.032000+00:00"
       }
     },
     {
@@ -18258,13 +18258,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.23838,
-          27.85631
+          -80.14372,
+          27.69125
         ]
       },
       "properties": {
         "id": 3665866,
-        "last_update": "2026-08-29T09:00:32.632990Z",
+        "last_update": "2026-08-31T16:00:37.861216Z",
         "name": "Elsa",
         "slug": "elsa",
         "category": 8496,
@@ -18279,7 +18279,7 @@
         "length": "3 ft.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-08-29T07:53:47.628000Z",
+        "last_move_datetime": "2026-08-31T15:01:32.887000Z",
         "stage_of_life": "Adult",
         "species": "Loggerhead Sea Turtle (Caretta caretta)",
         "image": "https://media.mapotic.com/cdn-cgi/image/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665866/bkwoxe-elsa-edited-for-tracker.jpeg",
@@ -18288,8 +18288,8 @@
           "domain": "ce838d3ec.cloudimg.io"
         },
         "gender": "Female",
-        "zping": true,
-        "zping_datetime": "2026-08-29T07:54:47.628000+00:00"
+        "zping": false,
+        "zping_datetime": "2026-08-31T14:17:56.884000+00:00"
       }
     }
   ]
