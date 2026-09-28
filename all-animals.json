@@ -16041,7 +16041,7 @@
       },
       "properties": {
         "id": 1480119,
-        "last_update": "2026-09-27T03:00:22.109051Z",
+        "last_update": "2026-09-28T06:00:28.731695Z",
         "name": "Ormond",
         "slug": "ormond",
         "category": 8494,
@@ -16066,7 +16066,7 @@
         },
         "gender": "Male",
         "zping": true,
-        "zping_datetime": "2026-09-27T02:18:21+00:00"
+        "zping_datetime": "2026-09-28T05:16:24.641000+00:00"
       }
     },
     {
@@ -17874,7 +17874,7 @@
       },
       "properties": {
         "id": 2893202,
-        "last_update": "2026-05-19T16:30:31.817918Z",
+        "last_update": "2026-09-28T16:00:32.309606Z",
         "name": "Serena",
         "slug": "serena",
         "category": 8494,
@@ -17899,7 +17899,7 @@
         },
         "gender": "Female",
         "zping": true,
-        "zping_datetime": "2026-01-08T05:25:42+00:00"
+        "zping_datetime": "2026-09-28T14:38:03.549000+00:00"
       }
     },
     {
@@ -17985,13 +17985,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.21821,
-          35.15823
+          -75.11971,
+          35.39829
         ]
       },
       "properties": {
         "id": 3551617,
-        "last_update": "2026-09-27T08:00:31.219665Z",
+        "last_update": "2026-09-28T12:00:33.115561Z",
         "name": "Tupelo",
         "slug": "tupelo",
         "category": 8496,
@@ -18006,7 +18006,7 @@
         "length": "4 ft. 11 in.",
         "weight": "630 lbs.",
         "tag_location": "Jupiter Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T07:17:14.547000Z",
+        "last_move_datetime": "2026-09-28T10:20:50.727000Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3551617/yrofva-tupelo.jpeg",
@@ -18016,7 +18016,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-09-27T05:13:07.539000+00:00"
+        "zping_datetime": "2026-09-28T09:23:38.728000+00:00"
       }
     },
     {
@@ -18024,13 +18024,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.73755,
-          43.14576
+          -68.75898,
+          43.17838
         ]
       },
       "properties": {
         "id": 3552504,
-        "last_update": "2026-09-27T14:00:29.628500Z",
+        "last_update": "2026-09-28T13:00:55.844348Z",
         "name": "Tallulah",
         "slug": "tallulah",
         "category": 8496,
@@ -18045,7 +18045,7 @@
         "length": "5 ft. 3 in.",
         "weight": "990 lbs.",
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T12:52:28.304000Z",
+        "last_move_datetime": "2026-09-28T11:47:02.527000Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552504/lh2khp-tallulah.jpeg",
@@ -18055,7 +18055,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-09-27T11:24:13.299000+00:00"
+        "zping_datetime": "2026-09-28T09:21:16.509000+00:00"
       }
     },
     {
@@ -18063,13 +18063,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.40072,
-          30.86135
+          -80.27807,
+          31.03025
         ]
       },
       "properties": {
         "id": 3552505,
-        "last_update": "2026-09-27T14:00:29.282818Z",
+        "last_update": "2026-09-28T16:00:32.047966Z",
         "name": "Priscilla",
         "slug": "priscilla",
         "category": 8496,
@@ -18084,7 +18084,7 @@
         "length": "5 ft. 7 in.",
         "weight": "840 lbs.",
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T12:59:45.440000Z",
+        "last_move_datetime": "2026-09-28T15:23:35Z",
         "stage_of_life": "Adult",
         "species": "Leatherback Sea Turtle (Dermochelys coriacea)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3552505/6od6lv-priscilla-cropped.jpeg",
@@ -18093,8 +18093,8 @@
           "domain": "ce838d3ec.cloudimg.io"
         },
         "gender": "Female",
-        "zping": true,
-        "zping_datetime": "2026-09-27T13:27:08.935000+00:00"
+        "zping": false,
+        "zping_datetime": "2026-09-28T13:44:35.957000+00:00"
       }
     },
     {
@@ -18102,13 +18102,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -81.87195,
-          24.47396
+          -81.87894,
+          24.47216
         ]
       },
       "properties": {
         "id": 3665757,
-        "last_update": "2026-09-27T14:00:28.808143Z",
+        "last_update": "2026-09-28T15:00:35.159175Z",
         "name": "Brie",
         "slug": "brie",
         "category": 8496,
@@ -18123,7 +18123,7 @@
         "length": "3 ft. 9 in.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T13:00:26.921000Z",
+        "last_move_datetime": "2026-09-28T13:51:21.517000Z",
         "stage_of_life": "Adult",
         "species": "Green Sea Turtle (Chelonia mydas)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665757/yreust-brie-edited-for-tracker.jpeg",
@@ -18133,7 +18133,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-09-27T10:29:10.400000+00:00"
+        "zping_datetime": "2026-09-28T04:25:08.968000+00:00"
       }
     },
     {
@@ -18141,13 +18141,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.94601,
-          24.69048
+          -80.94015,
+          24.6901
         ]
       },
       "properties": {
         "id": 3665775,
-        "last_update": "2026-09-27T14:00:28.967867Z",
+        "last_update": "2026-09-28T13:00:55.551290Z",
         "name": "Pesto",
         "slug": "pesto",
         "category": 8496,
@@ -18162,7 +18162,7 @@
         "length": "3 ft. 10 in.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T12:20:39.489000Z",
+        "last_move_datetime": "2026-09-28T11:57:10.887000Z",
         "stage_of_life": "Adult",
         "species": "Green Sea Turtle (Chelonia mydas)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665775/gbev9c-pesto-edited-for-tracker.jpeg",
@@ -18172,7 +18172,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-09-27T10:30:02+00:00"
+        "zping_datetime": "2026-09-28T09:22:33.389000+00:00"
       }
     },
     {
@@ -18258,13 +18258,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.15591,
-          27.67259
+          -80.16004,
+          27.68024
         ]
       },
       "properties": {
         "id": 3665866,
-        "last_update": "2026-09-27T14:00:29.460466Z",
+        "last_update": "2026-09-28T17:00:32.134644Z",
         "name": "Elsa",
         "slug": "elsa",
         "category": 8496,
@@ -18279,7 +18279,7 @@
         "length": "3 ft.",
         "weight": null,
         "tag_location": "Juno Beach, Florida, USA",
-        "last_move_datetime": "2026-09-27T13:01:40.664000Z",
+        "last_move_datetime": "2026-09-28T16:05:54.834000Z",
         "stage_of_life": "Adult",
         "species": "Loggerhead Sea Turtle (Caretta caretta)",
         "image": "https://media.mapotic.com/i/metadata=none,width=400,height=266,fit=crop/https://media.mapotic.com/media/image/geo/3413/3665866/bkwoxe-elsa-edited-for-tracker.jpeg",
@@ -18289,7 +18289,7 @@
         },
         "gender": "Female",
         "zping": false,
-        "zping_datetime": "2026-09-27T06:24:26.632000+00:00"
+        "zping_datetime": "2026-09-28T04:27:59.768000+00:00"
       }
     },
     {
